@@ -1,0 +1,290 @@
+h1,
+h2 {
+  font-family: "Signika", sans-serif;
+}
+span {
+  font-family: "Open Sans", sans-serif;
+}
+/* --------------------------------- COMMON --------------------------------- */
+input,
+textarea {
+  outline: none;
+}
+/* --------------------------------- COMMON --------------------------------- */
+
+/* ---------------------------------- TEAM ---------------------------------- */
+.team {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 70px;
+  gap: 30px;
+}
+.member {
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+}
+.member img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.member:hover img {
+  transform: scale(1.1);
+}
+.img-member {
+  width: 100%;
+  height: 292px;
+  position: relative;
+  transition: 0.2s;
+}
+.member h2 {
+  padding-top: 20px;
+}
+.app-contact {
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  gap: 10px;
+}
+.member:hover .app-contact {
+  display: flex;
+  transition: 0.2s ease-in;
+}
+.app-contact a {
+  padding: 10px 13px;
+  border-radius: 100%;
+  font-size: 20px;
+  background-color: black;
+  color: white;
+  display: block;
+}
+.app-contact a:nth-child(1) {
+  background-color: #106bff;
+}
+.app-contact a:nth-child(2) {
+  background-color: #249ef0;
+}
+.app-contact a:nth-child(3) {
+  background-color: #e7082a;
+}
+.app-contact a:nth-child(4) {
+  background-color: #d75a60;
+  padding: 10px 14px;
+}
+.app-contact a:hover {
+  background-color: rgba(0, 0, 255, 0.3);
+}
+
+.img-member::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(45, 252, 45, 0.3);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.member:hover .img-member::before {
+  opacity: 1;
+}
+/* ---------------------------------- TEAM ---------------------------------- */
+/* ---------------------------------- BRAND --------------------------------- */
+
+/* ---------------------------------- BRAND --------------------------------- */
+/* ---------------------------------- FORM ---------------------------------- */
+.form {
+  margin: 70px;
+  padding: 70px;
+  box-shadow: 0px 0px 10px 0px rgb(192, 192, 192);
+  background-image: url(../images/brand-bg.png);
+}
+.form .contact-form > div {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.form input {
+  width: 100%;
+  padding: 10px;
+  height: 60px;
+  border: 1.5px solid #eff2f7;
+  font-size: 16px;
+}
+.form textarea {
+  font-size: 16px;
+  width: 100%;
+  margin-top: 20px;
+  padding: 20px;
+  border: 1.5px solid #eff2f7;
+  height: 150px;
+}
+.form button {
+  width: 100%;
+  padding: 20px;
+  background-color: #81c848;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: none;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: 0.2s ease-in;
+  font-size: 16px;
+}
+.form button:hover {
+  background-color: #579624;
+  transition: 0.2s ease-in-out;
+}
+
+.contact-form-item {
+  position: relative;
+  display: flex;
+  margin-bottom: 15px;
+}
+.contact-form-item.error::after {
+  content: attr(data-after);
+  position: absolute;
+  left: 2px;
+  height: 20px;
+  font-size: 13px;
+  color: red;
+  bottom: -25px;
+}
+
+#popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background: linear-gradient(
+    to right,
+    #6a11cb,
+    #2575fc
+  ); /* Gradient background */
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  z-index: 1000;
+  width: 350px;
+  color: white;
+  font-family: "Arial", sans-serif;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+#popup .icon {
+  font-size: 50px;
+  color: #4caf50;
+  margin-bottom: 10px;
+}
+
+#popup h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+#popup p {
+  font-size: 16px;
+  margin-bottom: 30px; /* Increase margin-bottom for more space */
+  color: #dcdcdc;
+}
+
+#close-popup {
+  padding: 10px 25px;
+  background-color: #ff6f61;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px; /* Add margin-top for more space */
+}
+
+#close-popup:hover {
+  background-color: #ff3b28;
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 999;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -55%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+.brand-item img {
+  transition: transform 0.3s ease;
+}
+
+.brand-item:hover img {
+  transform: scale(1.1);
+}
+.brand-item:active img {
+  transform: scale(1.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* ---------------------------------- FORM ---------------------------------- */
+/* ------------------------------- RESPONSIVE ------------------------------- */
+@media (max-width: 1080px) {
+  .team {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .team {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .form .contact-form > div {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media (max-width: 575px) {
+  .team {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .form {
+    margin: 5px;
+    padding: 20px;
+  }
+  .brand-item {
+    width: 30%;
+    margin: 0px 50px;
+  }
+}
+/* ------------------------------- RESPONSIVE ------------------------------- */
+/* ------------------------------- Nhấp chuột vào ô form ------------------------------- */
+.form input:hover,
+.form textarea:hover {
+  border-color: #81c848;
+  box-shadow: 0 0 5px rgba(129, 200, 72, 0.5);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form button:active {
+  transform: scale(0.95);
+  transition: transform 0.1s ease;
+}

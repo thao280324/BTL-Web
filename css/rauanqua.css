@@ -1,0 +1,71 @@
+.bookmark {
+    position: relative;
+    min-height: 450px;
+    background-image: url('../images/chitietrauanqua.webp');
+    background-size: cover;
+    text-align: center;
+    font-family: "Signika", sans-serif;
+}
+
+.bookmark::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.content-bookmark {
+    position: relative;
+    z-index: 1;
+    color: white;
+}
+.content-bookmark > div h1{
+    font-size: 60px;
+}
+.content-bookmark > div h3{
+    font-weight: normal;
+    font-size: 35px;
+    padding-top: 20px;
+}
+.content-bookmark > div{
+    padding-top: 180px;
+}
+.content-bookmark a{
+    text-decoration: none;
+    color:white;
+    transition: 0.3s;
+}
+.content-bookmark a:hover{
+    color:#7dc642;
+}
+.rau-list{
+    padding: 10px 50px;
+}
+.page{
+    text-align: center;
+    display:flex;
+    justify-content: center;
+    font-family: "Roboto",sans-serif;
+    font-size: 18px;
+    margin-bottom: 45px;
+}
+.page li{
+    display:inline-block;
+    border: #c5c3c3 1px solid;
+    padding: 5px 8px;
+    margin-right: -5px;
+}
+
+.page-numbers a{
+    color:rgb(92, 121, 248);
+}
+.current{
+    background-color: #d0cfcf;
+    color:#49596c;
+}
+.page-numbers li:hover{
+    background-color: #d0cfcf;
+}

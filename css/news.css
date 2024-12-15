@@ -1,0 +1,41 @@
+
+.tintuc{
+    padding: 15px 9%; 
+    padding-bottom: 100px;
+}
+.ctnbaiviet {
+        display: grid;
+        grid-template-columns: auto auto auto ;
+}
+
+.ctnbaiviet .baiviet{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 9px; 
+}
+
+.baiviet {
+        background-color: antiquewhite;
+        border: none;
+        padding: 10px;
+        margin: 5px;
+        font-size: 20px;
+}
+
+
+.tintuc .ctnbaiviet .baiviet h2, h3{
+    text-align: center;
+    padding-bottom: 15px;
+    top: 20%;
+}
+
+.btnbv{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #17b81f; 
+    color: #fff; 
+    border: none;
+    border-radius: 9px; 
+    text-decoration: none; 
+    text-align: center;
+}

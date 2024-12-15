@@ -1,0 +1,84 @@
+body {
+  font-family: "Open Sans", sans-serif;
+}
+h3 {
+  font-family: "Signika", sans-serif;
+}
+a:has(.fa-solid.fa-angle-right) {
+  font-family: "Signika", sans-serif;
+}
+.blog {
+  background-color: #f5faed;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 100px;
+}
+.img-blog {
+  height: 240px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.blog-item img {
+  transition: 0.2s;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.blog-item img:hover {
+  transition: 0.2s;
+  transform: scale(1.1);
+}
+.content-blog {
+  width: 90%;
+  padding: 30px;
+  background-color: white;
+  margin: auto;
+  transform: translateY(-50px);
+}
+.content-blog span {
+  display: block;
+  padding-top: 10px;
+}
+.content-blog a {
+  width: max-content;
+  text-decoration: none;
+  padding: 15px 20px;
+  border-radius: 50px;
+  border: none;
+  display: block;
+  background-color: #7dc642;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 30px;
+  cursor: pointer;
+  transition: 0.2s ease-in;
+}
+.content-blog a:hover {
+  background-color: #579624;
+  transition: 0.2s ease-in-out;
+}
+.content-blog:nth-of-type(1) h3,
+.content-blog:nth-of-type(2) h3 {
+  line-height: 1.5em;
+  height: 4.5em;
+  overflow: hidden;
+}
+/* ------------------------------- RESPONSIVE ------------------------------- */
+@media (max-width: 1080px) {
+  .blog {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .blog {
+    padding: 50px;
+  }
+}
+@media (max-width: 484px) {
+  .blog {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+/* ------------------------------- RESPONSIVE ------------------------------- */

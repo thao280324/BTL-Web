@@ -1,0 +1,565 @@
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+.container {
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+.hero {
+    width: 100%;
+    /* Chiều cao toàn màn hình */
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url(../images/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    /* Màu chữ trắng để dễ nhìn trên nền tối */
+}
+
+.hero__content {
+    margin-top: 124px;
+    margin-bottom: 180px;
+
+}
+
+.hero__content-title {
+    color: #fff;
+    font-family: "Signika", sans-serif;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 80px;
+    margin: 0px 0px 22px;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.hero__content-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero__content-list li {
+
+    color:
+        #fff;
+    display:
+        inline-block;
+    font-family:
+        "Open Sans", sans-serif;
+    font-size:
+        30px;
+    font-weight:
+        600;
+    line-height:
+        28px;
+    text-align:
+        center;
+    text-transform:
+        capitalize;
+}
+
+.hero__content ul li:first-child:after {
+    content: "||";
+    margin-left: 28px;
+    margin-right: 24px;
+}
+
+.hero__content-list li a {
+    color:
+        #fff;
+    text-decoration: none;
+}
+
+/*  Section infor */
+.infor {
+    width: 100%;
+}
+
+.infor__content {
+    padding-top: 100px;
+    padding-bottom: 50px;
+    display: flex;
+    gap: 0;
+}
+
+.infor__content-title {
+    position: relative;
+    z-index: 1;
+}
+
+.infor__content-title h5 {
+    color: #7dc642;
+    font-family: "Open Sans", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28.8px;
+    margin: 0px 0px 20px;
+    text-align: left;
+}
+
+.infor__content-title h3 {
+    color:
+        #363636;
+    font-family:
+        "Signika", sans-serif;
+    font-size:
+        45px;
+    font-weight:
+        700;
+    line-height:
+        50px;
+    text-align:
+        left;
+}
+
+.infor__content-icon img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    opacity: 0.1;
+    color:
+        #333;
+    display:
+        inline;
+    line-height:
+        28px;
+    text-align:
+        left;
+}
+
+.infor__content-description p {
+    color:
+        #333;
+    font-family:
+        "Open Sans", sans-serif;
+    line-height:
+        28px;
+    margin:
+        0px 0px 16px;
+    text-align:
+        left;
+}
+
+/* Section Service */
+.service {
+    margin-top: 100px;
+}
+
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.mb-100 {
+    margin-bottom: 100px;
+}
+
+.mb-50 {
+    margin-bottom: 50px;
+}
+
+.service-wrap-3 {
+    width: 100%;
+    background-color: #f2f9ec;
+    color: #333;
+    line-height: 28px;
+    margin: 0px 0px 30px;
+    padding: 40px 30px;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.service-wrap-3:hover {
+    background-color: #7dc642;
+    color: #fff;
+}
+
+.service-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+}
+
+.service-icon img {
+    width: 100%;
+}
+
+.service-details {
+    margin-top: 15px;
+}
+
+.service-details h4 a {
+    white-space: nowrap;
+    color: #363636;
+    display: inline-block;
+    font-family: "Signika", sans-serif;
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 31.2px;
+    text-align: center;
+    transition: color 0.3s;
+}
+
+.service-details p {
+    color: #686868;
+    font-family: "Open Sans", sans-serif;
+    font-size: 15px;
+    line-height: 26px;
+    text-align: center;
+    transition: color 0.3s;
+}
+
+.service-wrap-3:hover .service-details h4 a,
+.service-wrap-3:hover .service-details p {
+    color: #fff;
+}
+
+/* Section take care of */
+.take-care-of {}
+
+.take-care-of .container {
+    width: 80%;
+
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url(../images/video-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+}
+
+.take-care-of__content {
+    margin: 235px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.video-container {
+    position: relative;
+    width: 70%; /* Thay đổi kích thước video */
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+    display: block;
+    position: relative;
+    z-index: 1;
+}
+
+.video-poster {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.play-animation {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    font-size: 20px;
+    color: #fff;
+    background: #ffb500;
+    border-radius: 50%;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    cursor: pointer;
+}
+
+.play-animation:before {
+    content: "";
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    z-index: -1;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all 0.3s linear 0s;
+    animation-name: shape-2;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-delay: 0.8s;
+}
+
+.play-animation:after {
+    content: "";
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    z-index: -1;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all 0.3s linear 0s;
+    animation-timing-function: linear;
+    animation-delay: 0.5s;
+    animation-name: shape-3;
+    animation-duration: 3s;
+}
+
+.play-animation .shape {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    z-index: -1;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all 0.3s linear 0s;
+    animation-name: shape-1;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-delay: 1.1s;
+}
+
+.take-care-of__content h3 {
+    color: #fff;
+    font-size: 65px;
+    line-height: 65px;
+    font-weight: 600;
+    padding: 0 200px;
+    position: absolute;
+    top: 80px; /* Di chuyển tiêu đề lên trên */
+    z-index: 2;
+    font-family: "Signika", sans-serif;
+}
+
+/* Section morri */
+
+.morri {}
+
+.morri .container {}
+
+.morri__content {
+    padding-top: 100px;
+    padding-bottom: 70px;
+
+}
+
+.morri__content-title {
+    margin: 0 auto;
+}
+
+.morri__content-title h5 {
+    color: #7dc642;
+    font-size: 24px;
+    font-weight: 700;
+    font-family: "Open Sans", sans-serif;
+    margin-bottom: 20px;
+    text-align: center;
+
+}
+
+.morri__content-title h3 {
+    color: #363636;
+    font-family: "Signika", sans-serif;
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 50px;
+    text-align: center;
+    font-family: "Signika", sans-serif;
+}
+
+.service-wrap-2 {
+    border-radius: 5px;
+    background-color: rgb(251 251 251);
+    text-align: center;
+}
+.service-wrap-2:hover{
+ background-color: #7dc642;
+ color: #fff;
+}
+.service-wrap-2:hover a,
+.service-wrap-2:hover p{
+    color: #fff;
+    
+}
+
+.service-thumb {
+    width: 340px;
+    height: 385px;
+}
+
+.service-thumb img {
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 5px;
+     display: inline; 
+     line-height: 28px ;
+     text-align: left;
+     transition: all 0.3s linear 0s;
+}
+.service-details{
+    margin-top: 36px;
+    padding-bottom: 20px;
+}
+
+/* Section Choose */
+.choose{
+    width: 100%;
+    
+}
+.choose .container{
+    margin-top: 195px;
+    padding-bottom: 100px;
+}
+.choose-us-thumb {
+    position: relative;
+    z-index: 1;
+}
+.choose-us-thumb:before {
+    content: "";
+    border-top: 300px solid #7dc642;
+    border-right: 300px solid transparent;
+    position: absolute;
+    left: -40px;
+    top: -40px;
+    z-index: -1;
+}
+
+.align-self-center {
+   
+    text-align: center;
+}
+
+.section-title {
+    position: relative;
+    padding: 15px 0;
+    z-index: 1;
+}
+.section-title .icon {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: -1;
+    opacity: 0.07;
+}
+.mb-35 {
+    margin-bottom: 35px;
+}
+.section-title h5 {
+    color: #7dc642;
+    font-size: 24px;
+    font-weight: 700;
+    font-family: "Open Sans", sans-serif;
+    margin-bottom: 20px;
+}
+.section-title h3 {
+    font-size: 45px;
+    line-height: 50px;
+    color: #363636;
+    margin-bottom: 0;
+    font-family: "Signika", sans-serif;
+}
+
+.choose-us-list-2 {
+    display: flex;
+    flex-wrap: wrap;
+}
+.choose-us-list-2 .choose-list-icon {
+    width: 95px;
+}
+.choose-us-list-2 .choose-list-icon .icon {
+    font-size: 24px;
+    color: #fff;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    background: #7dc642;
+    text-align: center;
+    position: relative;
+    margin-top: 11px;
+    margin-left: 11px;
+    z-index: 1;
+}
+.choose-us-list-2 .choose-list-icon .icon:before {
+    content: "";
+    width: 60px;
+    height: 60px;
+    background: #7dc642;
+    top: -11px;
+    left: -11px;
+    opacity: 0.15;
+    z-index: -1;
+    position: absolute;
+}   
+.choose-us-list-2 .choose-list-details {
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%;
+}
+.choose-us-list-2 .choose-list-details h4 {
+    font-size: 24px;
+    line-height: 30px;
+    color: #363636;
+    margin-bottom: 14px;
+}
+.choose-us-list-2 .choose-list-details p {
+    color: #686868;
+    font-size: 16px;
+    line-height: 28px;
+    margin-bottom: 0;
+}
+
+/* Section brand */
+.brand{
+    background-image: url('../images/brand-bg.png');
+    background-color: #7dc642;
+}
+.brand .container{
+    padding:80px 0;
+}
+
+.brand__slider{
+    display: flex;
+    justify-content: space-around  !important;
+    gap: 30px;
+}

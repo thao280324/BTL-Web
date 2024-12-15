@@ -1,0 +1,904 @@
+body{
+    font-family: "Signika", sans-serif;
+}
+/* slider */
+.slider {
+    max-width: 100vw;
+    height: 670px;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+}
+.sliderImg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    display: flex;
+    width: max-content;
+    overflow: hidden;
+    transition: transform 0.5s ease-in-out;
+}
+.banner {
+    min-width: 100vw;
+    height: 100%;
+    position: relative;
+}
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+.nutbam{
+    position: absolute;
+    top: 45%;
+    left: 5%;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+.nutbam button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #7dc642;
+    color: #fff;
+    border: none;
+    font-family: monospace;
+}
+#nuttrai, #nutphai {
+    font-size: 27px;
+    cursor: pointer;
+}
+
+.nutbam button:hover,
+.nutbam button:focus {
+    background-color: #37bd4d; 
+    
+} 
+.dots{
+    position: absolute;
+    bottom:10px;
+    color: #fff;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0; 
+    display: flex;
+    justify-content: center;   
+}
+.dots li{
+    list-style: none;
+    width: 10px;
+    height: 10px;
+    background-color: #465f2f; /*mau nen mac dinh*/
+    margin: 20px;
+    border-radius: 20px;
+    transform: 1s ;
+}
+.dots li.active{
+    width: 30px;
+    background-color: #7dc642; /*mau nen khi bam phai*/
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+    height:45%;
+}
+.content h4{
+    font-size: 28px;
+}
+
+/* hiệu ứng chữ mỗi khi chuyển slide */
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes grow {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* hiệu ứng cho h4 and h1 */
+.sliderImg .banner .content h4 {
+    animation: slideDown 1s ease-out;
+}
+
+.sliderImg .banner .content h1 {
+    animation: grow 1s ease-out;
+}
+
+.content h1{
+    font-size: 80px;
+    text-align: center;
+}
+
+.btnslider {
+    display: flex;
+    justify-content: center; 
+    
+}
+
+.btn {
+    display: inline-flex; 
+    justify-content: center;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #7dc642;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    text-decoration: none; 
+    font-size: 16px;
+    transition: background-color 0.3s;
+    margin: 0 5px; 
+} 
+
+.btn:hover {
+    background-color: #72aa7e;
+}
+
+.plus{
+    margin-left: 10px; 
+    font-size: 23px;
+} 
+@media (max-width: 768px) {
+    .content h1 {
+        font-size: 42px;
+    }
+    .nutbam button{
+        display: none;
+    }
+}
+
+/* Introduce */
+.introduce {
+    position: relative;
+    width: 100%;
+    height: 115vh;
+    z-index: 0;
+    background-image: url(../images/bggioithieu1.png);
+    background-repeat: no-repeat;
+    background-position: 4% 25%;
+    background-size: 450px 450px;/* chỉnh kích thước ảnh  */
+}
+
+.introduce-container {
+    display: flex;
+    align-items: center; 
+    width: 94%;
+    height: 100%;
+    gap: 20px; 
+    margin-left: 5%;
+}
+
+.intro-content {
+    flex: 1;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    margin-bottom: 2%; 
+}
+
+.intro-content h3, h1 {
+    text-align: left;
+}
+
+.intro-content h3 {
+    font-size: 28px;
+    color: rgb(162, 205, 75);
+}
+
+.intro-content h1 {
+    font-size: 50px;
+    color: black;
+}
+
+.intro-content p {
+    font-size: 18px;
+    text-align: left;
+    color: black;
+}
+
+.btngt {
+    align-self: flex-start;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btngt:hover {
+    background-color: #1a3b1e;
+}
+
+.intro-container {
+    flex: 1.5;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px; 
+    height: auto;
+}
+
+.intro-items {
+    position: relative;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+
+.intro-items h3 {
+    font-size: 25px;
+}
+
+.intro-items p {
+    font-size: 18px;
+    text-align: center;
+}
+.intro-items img {
+    width: 170px; /* Tăng kích thước chiều rộng */
+    height: 170px; /* Tăng kích thước chiều cao */
+    margin: auto; /* Căn giữa */
+}
+
+#left1, #left2 {
+    background-color: #c7e64c;
+    clip-path: polygon(0% 0%, 100% 5%, 100% 100%, 0% 96%);
+}
+
+#right1, #right2 {
+    background: #b7ce23;
+    clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 94%);
+}
+
+@media (max-width: 768px) {
+    .introduce {
+        height: 270vh;
+    }
+    .introduce-container { 
+        flex-direction: column;
+        align-items: center; 
+    }
+
+    .intro-content, .intro-container {
+        width: 100%;
+        margin: 30px;
+        flex: none; 
+    }
+
+    .intro-container {
+        grid-template-columns: 1fr; 
+    }
+}
+/* Popup */
+.popup-banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7); /* Transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.popup-content {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    max-width: 600px;
+    width: 80%;
+    position: relative;
+}
+
+.popup-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.popup-content h2 {
+    font-size: 24px;
+    color: #7dc642;
+    margin: 10px 0;
+}
+
+.popup-content p {
+    font-size: 18px;
+    color: #333;
+}
+
+.close-popup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #fa314a;
+}
+
+.hidden {
+    display: none;
+}
+
+
+/* trang trí */
+.intro {
+    width: 100%;
+    height: 96vh;
+    margin: auto;
+    position: relative;
+    overflow: visible; /* nhìn thấy ngay cả khi tràn ảnh ra NGOÀI */
+}
+.intro{
+    background: url('../images/bggioithieu.png') no-repeat center center;
+    background-size: cover; /* Đặt kích thước ảnh phủ toàn bộ phần */
+}
+.intro-ct {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    right: 10%;
+    color: #fff; 
+    width: 47%;
+    height: 100%;
+    position: absolute; 
+    z-index: 1;
+}
+
+.intro .intro-ct h1{
+    font-size: 70px;
+    font-weight: 50px;
+    text-align: center;
+}
+.intro .intro-ct h3{
+    font-size: 25px;
+}
+.intro .intro-ct p{
+    font-size: 22px;
+    text-align: center;
+}
+.btntt:hover {
+    background-color: #1a3b1e; /* Màu nền trắng khi di chuột vào */
+}
+#trung {
+    position: absolute;
+    top: -15%; /* Khoảng cách từ bottom */
+    right: 10%; 
+    z-index: 4;
+}
+
+@media (max-width: 1200px){
+    .intro-ct {
+        width: 75%;
+    }
+}
+@media only screen and (max-width: 767px){
+    .intro .intro-ct h1{
+        font-size: 35px;
+        font-weight: 30px;
+    }
+    .intro .intro-ct h3{
+        font-size: 23px;
+    }
+    .intro .intro-ct p{
+        font-size: 21px;
+    }
+    #trung {
+        display: none;
+    }
+}
+
+/* dịch vụ */
+.service {
+    padding: 15px 4%; 
+    padding-bottom: 100px;
+    position: relative;
+    width: 100%;
+    height: 105vh;
+}
+
+
+.service .header-service h1, h3{
+    text-align: center;
+    padding-bottom: 15px;
+    font-weight: bold;
+}
+.header-service h1{
+    font-size: 40px;
+    color: #0a0a0a;
+}
+.header-service h3{
+    font-size: 30px;
+    color: #7dc642;
+}
+
+.service .box-service{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 39px; 
+}
+
+.service .box-service .box:hover{
+    background-image: linear-gradient(rgba(37, 124, 16, 0.822), rgba(71, 102, 52, 0.762)), url(../images/bgboxdichvu.png);
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center;
+    color: white;
+}
+.service .box-service .box:hover img{
+    filter: brightness(0) invert(1); 
+}
+.service .box-service .box {
+    text-align: center;
+    background-color: rgb(253, 253, 253);
+    padding: 30px 20px;
+    transition: color 0.5s ease, box-shadow 0.5s ease, transform 0.5s ease;
+}
+.service .box-service .box .line {
+    transition: background-color 0.5s;
+}
+.service .box-service .box:hover h4,
+.service .box-service .box:hover p,
+.service .box-service .box:hover .btn-service {
+    color: white; /* Đổi màu chữ của h4, p và nút thành màu trắng */
+}
+ 
+.box img{ 
+    height: 120px;
+} 
+.box h4{
+    color: black;
+    font-size: 24px;
+    padding: 10px 0;
+}
+
+.box p{
+    color: black;
+    font-size: 18px;
+    text-align: center;
+    line-height: 1.8;
+}
+
+.box:hover{
+    box-shadow: 0 18px 15px rgba(0,0,0,0.3);  
+    transform: translateY(-10px);
+}
+
+.btn-service{
+    text-decoration: none; /* Loại bỏ gạch chân */
+    color: gray;
+    font-size: 30px;
+}
+/* reponsive */
+
+@media only screen and (max-width: 767px){
+    .service{
+        height: 1860px;
+    }
+    .service .box-service{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+    .service{
+        height: 1130px;
+    }
+    .service .box-service
+    {grid-template-columns: repeat(2, 1fr);
+    } 
+}
+
+/* vòng tròn phần trăm*/
+    .circle-intro {
+    background-color: #727f3b;
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    .circle-container {
+        position: absolute;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); /* 4 cột với kích thước bằng nhau */
+        gap: 30px;
+    }
+    .chart-container {
+        color: #fff;
+    }
+    .chart {
+        position: relative;
+        width: 200px; /* kích thước vòng tròn */
+        height: 200px; 
+        margin-left: 10%;
+    }
+    .chart .percent {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 32px;
+    }
+    
+    .description {
+        text-align: center;
+        margin-top: 10px;
+        font-size: 18px;
+    }
+    .description p{
+        text-align: center;
+    }
+        
+/* Màn hình iPad (cả chiều ngang và chiều dọc) */
+@media (min-width: 768px) and (max-width: 1111px) {
+    .circle-intro {
+        height: 135vh;
+    }
+    .circle-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 cột trên iPad */
+        gap: 80px;
+    }
+}
+
+/* Màn hình điện thoại theo chiều dọc */
+@media (max-width: 767px) {
+    .circle-intro {
+        height: 240vh;
+    }
+    .circle-container {
+        grid-template-columns: repeat(1, 1fr); /* 1 cột trên màn hình rất nhỏ */
+    }
+}
+
+
+/* HOT SALE */
+.hotsale{
+	width: 100%;
+    height: 96vh;
+    margin: auto;
+    position: relative;
+}
+
+.hotsale-container{
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	top: 12%;
+	left: 80px;
+}
+  
+.hotsale-container h3{
+    font-family: sans-serif;
+	color: #7dc642;
+    text-align: left;
+	font-size: 24px;
+}
+
+.hotsale-container h1{
+	color: rgb(8, 8, 8);
+	font-size: 58px;
+}
+
+.hotsale-container h2{
+	color: rgb(8, 8, 8);
+	font-size: 45px;
+}
+.hotsale-container p{
+	color: rgb(12, 12, 12);
+    text-align: left;
+	font-size: 24px;
+}
+
+#clockdiv {
+	font-family: sans-serif;
+	color: #7dc642;
+	display: inline-block;
+	text-align: center;
+	font-size: 30px;
+}
+  
+#clockdiv > div{
+	padding: 13px 28px 15px 28px;
+    border-width: 20px;
+	background: #fff;
+    margin-right: 20px;
+	border-bottom: 4px solid #7dc642;
+	border-right: 4px solid #7dc642;
+	display: inline-block;
+}
+  
+#clockdiv div > span{
+	padding: 10px;
+	display: inline-block;
+  }
+.smalltext{
+	padding-top: 5px;
+	font-size: 16px;
+  }
+#quaman{
+	position: absolute;
+	top: 15%;
+	right: 6%;
+}
+#ccvietgap{
+    position: absolute;
+	top: 7%;
+	right: 5%;
+}
+.btnhs:hover {
+    background-color: #1a3b1e; /* Màu nền trắng khi di chuột vào */
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+    .hotsale-container{
+        left: 5%;
+    }
+    #quaman{
+        width: 320px;
+        height: 320px;
+    }
+    #quaman{
+        position: absolute;
+        top: 29%;
+        right: 5%;
+    }
+}
+
+@media only screen and (max-width: 767px){
+    .hotsale-container{
+        left: 10%;
+    }
+    #quaman, #ccvietgap{
+        display: none;
+    }
+    #clockdiv > div{
+        padding: 10px 15px 10px 15px;
+        border-width: 10px;
+        background: #fff;
+        margin-right: 10px;
+        border-bottom: 4px solid #7dc642;
+        border-right: 4px solid #7dc642;
+        display: inline-block;
+    }
+}
+
+/* QUOTES */
+.quotes {
+    width: 100%;
+    height: 680px;
+    position: relative;
+    color: white;
+}
+.quotes {
+    background-image: url(../images/bgquotes.png);
+    background-size: cover; 
+    background-position: center;
+} 
+.quote-container {
+    width: 88%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    left: 85px;
+}
+
+.quote-slide{
+    display: flex !important; 
+    padding: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.kol-Image {
+    flex: 1.1 !important;
+    display: flex;
+}
+
+.kol-Image img {
+    max-width: 100%; 
+    border-radius: 15px;
+}
+
+.kol-content {
+    flex: 1.2;
+    padding: 20px;
+    pointer-events: none;
+}
+
+.kol-content blockquote {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.kol-info{
+    display: flex;
+    align-items: center;
+}
+.kol-info img{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    box-shadow: 0 0 0 3px white; 
+}
+
+@media only screen and (max-width: 767px) {
+
+
+}
+
+
+/* BÀI VIẾT */
+.news{
+    padding: 15px 9%; 
+    padding-bottom: 100px;
+    width: 100%;
+    height: 850px;
+    position: relative;
+    top: 70px;
+}
+.news{
+    background-image: url(../images/bggioithieu1.png);
+    background-repeat: no-repeat; 
+    background-position: 50% 0px; 
+    background-size: 190px 190px;
+}
+
+.news h2, h3{
+    text-align: center;
+}
+.news h2{
+    font-size: 39px;
+}
+.news h3{
+    font-size: 24px;
+    color: #80af0c;
+}
+
+.post-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    width: 100%;
+    height: 500px;
+}
+
+.postImg {
+    position: relative;
+    overflow: hidden;
+    height: 230px; 
+    cursor: pointer; 
+}
+.postImg img {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease; 
+    object-fit: cover; 
+}
+.postImg:hover img {
+    transform: scale(1.1); /* Zoom ảnh lên nhưng vẫn nằm trong khung */
+}
+
+.post {
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    margin: 15px;
+}
+
+.time-container{ 
+    display: flex;
+    margin-left: 20px; 
+    margin-top: 30px; 
+    flex-wrap: nowrap;
+}
+
+.time-items{
+        margin-right: 10px; /* Khoảng cách mặc định giữa các items */ }
+
+.time-items:nth-child(2) {
+        margin-right: 30px; /* Khoảng cách giữa item 2 và item 3 */
+    }
+
+.post p {
+    text-align: left;
+    color: black;   
+} 
+
+.text-container{
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start; 
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 15px;
+}
+.btnnews{
+    bottom: 30px;
+}
+.btnnews:hover{
+    background-color: #1a3b1e;
+}
+
+.text-title{
+    font-weight: bold;
+    color: black;
+    font-size: 20px;
+}
+.text-title:hover{
+    color: #80af0c;
+}
+
+@media only screen and (max-width: 767px) {
+    .news{
+        height: 2050px;
+    }
+    .post-container{
+        display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+            gap: 10px;
+            padding: 20px;
+    }
+}
+
+/* back to top */
+
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 23px;
+    right: 33px;
+    z-index: 99;
+    font-size: 18px;
+    width: 50px;
+    height:50px;
+    opacity: 1;
+    border: 2px #cfc3c3 solid;
+    transition: all .2s;
+    background-color: #7dc642;
+    color: white;
+    cursor: pointer;
+    border-radius: 50%;
+}
+#myBtn i {
+    font-size: 24px; /* Adjust icon size */
+}
+#myBtn:hover {
+  background-color: #196d0e;
+}
+
