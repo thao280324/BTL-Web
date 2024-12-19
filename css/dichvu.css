@@ -191,8 +191,8 @@ li {
 }
 
 .service-icon {
-    width: 60px;
-    height: 60px;
+    width: 200px;
+    height: 160px;
     margin: 0 auto;
 }
 
@@ -238,14 +238,14 @@ li {
 
     background:
         linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-        url(../images/video-bg.jpg);
+        url(../images/video.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: rgb(245, 245, 245);
 
 }
 
@@ -261,6 +261,10 @@ li {
 .video-container {
     position: relative;
     width: 70%; /* Thay đổi kích thước video */
+
+}
+#video-title {
+    color: black;
 }
 
 .video-container video {
@@ -444,23 +448,23 @@ li {
     width: 100%;
     
 }
-.choose .container{
-    margin-top: 195px;
-    padding-bottom: 100px;
-}
 .choose-us-thumb {
+    flex: 0 0 95%; /* Tăng kích thước ảnh lên chiếm 70% chiều rộng */
+    max-width: 95%; /* Giới hạn chiều rộng tối đa */
     position: relative;
     z-index: 1;
+    margin-right: 20px; /* Khoảng cách với nội dung chữ */
 }
-.choose-us-thumb:before {
-    content: "";
-    border-top: 300px solid #7dc642;
-    border-right: 300px solid transparent;
-    position: absolute;
-    left: -40px;
-    top: -40px;
-    z-index: -1;
+
+.choose-us-thumb img {
+    width: 100%; /* Ảnh tự mở rộng theo container */
+    height: auto; /* Tỷ lệ chiều cao giữ nguyên */
+    display: block;
 }
+
+.choose .content {
+    flex: 0 0 25%; /* Nội dung chữ chiếm 25*/
+   }
 
 .align-self-center {
    
@@ -547,19 +551,4 @@ li {
     font-size: 16px;
     line-height: 28px;
     margin-bottom: 0;
-}
-
-/* Section brand */
-.brand{
-    background-image: url('../images/brand-bg.png');
-    background-color: #7dc642;
-}
-.brand .container{
-    padding:80px 0;
-}
-
-.brand__slider{
-    display: flex;
-    justify-content: space-around  !important;
-    gap: 30px;
 }
