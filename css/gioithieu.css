@@ -138,7 +138,7 @@ a {
 
 .btn-theme {
     color: #fff;
-    background: #7dc642;
+    background: #5b7739;
 }
 
 .btn-theme:hover {
@@ -210,82 +210,66 @@ a {
 }
 
 /* Section approch-area */
-.approch-area{
-    background-color: #1f2b3b;
-    padding-top: 130px;
-    padding-bottom: 100px;
+/* Đảm bảo các cột nằm trong cùng một hàng và chia thành 4 phần */
+/* Phần tổng quan của Section */
+.approch-area {
+    background-color: #ffffff; /* Màu nền trắng */
+    padding: 50px 0;
 }
 
-.approch-area .section-title {
-    position: relative;
-    padding: 15px 0;
-    z-index: 1;
-}
-.approch-area .section-title h5{
-    color:white;
-    font-size: 24px;
-    font-weight: 700;
-    font-family: "Open Sans", sans-serif;
-    margin-bottom: 20px;
-}
-.approch-area .section-title h3{
+.section-title h3 {
     font-family: "Signika", sans-serif;
-    font-size: 45px;
-    line-height: 50px;
-    color: #fff;
-    margin-bottom: 0;
+    font-size: 36px;
+    font-weight: bold;
+    color: #2e6f3e;
+    margin-bottom: 50px;
 }
-.section-title.text-center .icon {
-    left: 50%;
-    transform: translate(-50%, -50%);
+
+/* Tùy chỉnh box của mỗi cột */
+.approch-box {
+    padding: 30px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
 }
-.section-title-white .icon {
-    opacity: 0.1;
+
+.approch-box:hover {
+    transform: translateY(-10px); /* Di chuyển box khi hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
-.approch-wrap {
-    margin-bottom: 30px;
+
+/* Phần biểu tượng icon */
+.approch-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    background-color: #e8f5e9; /* Màu nền icon */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-.approch-wrap .approch-thumb {
-    overflow: hidden;
+
+.approch-icon img {
+    width: 50px;
+    height: 50px;
 }
-.approch-wrap .approch-thumb a {
-    display: block;
+
+/* Tiêu đề trong mỗi cột */
+.approch-box h4 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #2e6f3e;
+    margin-bottom: 10px;
 }
-.approch-wrap .approch-thumb a img {
-   width: 100%;
-   transition: all 0.3s linear 0s;
-}
-.approch-wrap:hover .approch-thumb img {
-    transform: scale(1.1);
-}
-.approch-wrap .approch-details {
-    text-align: center;
-    padding: 40px 35px;
-    background: #314156;
-   
-    transition: all 0.3s linear 0s;
-}
-.approch-wrap:hover .approch-details {
-    background: #7dc642;
-}
-.approch-wrap .approch-details h4 {
-    font-size: 24px;
-    margin-bottom: 15px;
-}
-.approch-wrap .approch-details h4 a {
-    text-decoration: none;
-    color: #fff;
-}
-.approch-wrap .approch-details p {
-    margin-bottom: 0;
-    color: #fff;
+
+/* Nội dung mô tả trong cột */
+.approch-box p {
     font-size: 16px;
-    line-height: 26px;
-}
-.approch-wrap .approch-details .read-more {
-    color: #fff;
-    font-size: 30px;
-    margin-top: 12px;
+    color: #555;
+    line-height: 1.6;
 }
 
 /* testimonial-area */
@@ -317,8 +301,8 @@ a {
 
 .section-title h3 {
     font-family: "Signika", sans-serif;
-    font-size: 45px;
-    line-height: 50px;
+    font-size: 43px;
+    line-height: 60px;
     color: #363636;
     margin-bottom: 0;
 }
@@ -335,7 +319,7 @@ a {
 
 .testimonial-slide {
     padding: 20px;
-    background: #fff;
+    background:rgb(235, 249, 236);
     border: 1px solid #e6e6e6;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -477,161 +461,189 @@ a {
 }
 
 /* Section fag - area */
+/* Phông chữ và màu nền chung cho toàn trang */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f7f7f7;
     margin: 0;
-    padding: 0;
+    background-color:whitesmoke; /* Màu nền nhẹ */
 }
 
-.fag-area {
-    padding: 20px;
+/* Phần chứa toàn bộ nội dung câu hỏi */
+.faq-area {
+    padding: 40px 20px;
+    background-color: #f6f8f4; /* Màu nền nhạt */
 }
 
-.faq-wrap {
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-}
-
-.faq-wrap h3 {
+/* Tiêu đề chính của phần câu hỏi */
+.faq-area h2 {
     text-align: center;
+    font-size: 28px;
+    color: #136b28;
+    margin-bottom: 30px;
+}
+
+/* Accordion (danh sách câu hỏi) */
+.accordion-item {
+    background-color: #ffffff; /* Màu trắng nền câu hỏi */
+    border: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+    margin-bottom: 15px; /* Khoảng cách giữa các câu hỏi */
+    border-radius: 5px;
+}
+
+/* Phần tiêu đề câu hỏi */
+.accordion-header .accordion-button {
+    font-size: 18px;
+    font-weight: bold;
+    color: #136b28; /* Màu chữ xanh đậm */
+    background: #fff;
+    border: none;
+    padding: 15px 20px;
+    box-shadow: none;
+}
+
+/* Nút thu gọn/mở rộng khi bấm */
+.accordion-button:not(.collapsed) {
+    color: #136b28; /* Màu khi mở rộng */
+    background-color: #e8f5e9; /* Nền xanh nhạt khi mở */
+}
+
+/* Nội dung câu trả lời */
+.accordion-body {
+    font-size: 16px;
+    padding: 15px 20px;
+    color: #333; /* Màu chữ đen nhạt */
+    background-color: #f9f9f9;
+}
+
+/* Hiệu ứng mũi tên chỉ trạng thái thu gọn/mở rộng */
+.accordion-button::after {
+    background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill="%23136b28" d="M1.5 3.5a.5.5 0 0 1 .707 0L8 9.293l5.793-5.793a.5.5 0 0 1 .707.707l-6 6a.5.5 0 0 1-.707 0l-6-6a.5.5 0 0 1 0-.707z"/></svg>');
+    transform: rotate(0deg);
+}
+
+.accordion-button:not(.collapsed)::after {
+    transform: rotate(180deg);
+}
+
+
+
+/* Phần container chính cho mục Đăng ký Email */
+.email-signup {
+    background-color: #f9f9f9; /* Màu nền nhạt */
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1000px; /* Chiều rộng tối đa */
+    background-color: #f2f2f2; /* Nền xám nhạt */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Phần hình ảnh bên trái */
+.signup-image {
+    flex: 1;
+    min-width: 300px;
+    overflow: hidden;
+}
+
+.signup-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Giữ tỉ lệ hình ảnh */
+}
+
+/* Phần nội dung bên phải */
+.signup-content {
+    flex: 1;
+    padding: 40px;
+    text-align: left;
+    background-color: rgb(235, 249, 236);
+}
+
+.signup-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     margin-bottom: 20px;
 }
 
-.accordion-wrapper .accordion-wrap {
-    border-bottom: 1px solid #ddd;
-    padding: 10px 0;
+.signup-header h2 {
+    font-size: 28px;
+    color: #136b28; /* Màu chữ xanh đậm */
+    font-weight: bold;
 }
 
-.accordion-wrapper .accordion-header button {
-    background: none;
-    border: none;
-    text-align: left;
-    width: 100%;
-    font-size: 18px;
-    padding: 10px;
-    cursor: pointer;
+.signup-icon {
+    width: 30px;
+    height: 30px;
 }
 
-.accordion-wrapper .accordion-header button:focus {
-    outline: none;
-}
-
-.accordion-wrapper .accordion-body {
-    padding: 10px;
+.signup-content p {
     font-size: 16px;
+    color: #555;
+    line-height: 1.6;
 }
-.fag-area{
-    width: 100%;
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-image: url(../images/cta-bg.jpg);
+
+.signup-content .highlight {
+    color: #136b28; /* Màu xanh cho chữ nổi bật */
+    font-weight: bold;
 }
-.container-fluid {
-    
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-}
-.container-fluid .row{
+
+/* Form nhập email */
+.signup-form {
+    margin-top: 20px;
     display: flex;
-    justify-content: end;
 }
-.no-gutters {
-    margin-right: 0;
-    margin-left: 0;
+
+.signup-form input {
+    flex: 3;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    font-size: 14px;
 }
-.faq-wrap {
-    margin-right: -12px;
-    padding: 75px 120px;
-    background-color: #f2f9ec;
+
+.signup-form button {
+    flex: 1;
+    background-color: #8bc34a; /* Màu xanh nhạt */
+    color: white;
+    font-size: 14px;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
-.faq-wrap h3 {
-    font-family: "Signika", sans-serif;
-    font-size: 60px;
-    line-height: 70px;
-    color: #363636;
-    margin-bottom: 35px;
+
+.signup-form button:hover {
+    background-color: #689f38; /* Màu xanh đậm hơn khi hover */
 }
-.accordion-wrapper .accordion-wrap {
-    margin-bottom: 15px;
-    background: #fff;
-    box-shadow: 0 10px 30px 0 rgba(99, 99, 99, 0.15);
-}
-.accordion-wrapper .accordion-wrap .accordion-header button[aria-expanded=true] {
-    color: #363636;
-    background: #fff;
-    border-color: #fff;
-}
-.accordion-wrapper .accordion-wrap .accordion-header button {
-    font-size: 22px;
-    font-weight: 600;
-    color: #363636;
-    background: #fff;
-    width: 100%;
-    border: 2px solid #fff;
-    padding: 18px 50px 18px 40px;
-    text-align: left;
-    border-radius: 0;
-    position: relative;
-}
-.accordion-wrapper .accordion-wrap .accordion-body {
-    padding: 0px 40px 30px;
-}
-.accordion-wrapper .accordion-wrap {
-    margin-bottom: 15px;
-    background: #fff;
-    box-shadow: 0 10px 30px 0 rgba(99, 99, 99, 0.15);
-}
-.accordion-wrapper .accordion-wrap .accordion-header button[aria-expanded=true] {
-    color: #363636;
-    background: #fff;
-    border-color: #fff;
-}
-.accordion-wrapper .accordion-wrap .accordion-header button {
-    font-size: 22px;
-    font-weight: 600;
-    color: #363636;
-    background: #fff;
-    width: 100%;
-    border: 2px solid #fff;
-    padding: 18px 50px 18px 40px;
-    text-align: left;
-    border-radius: 0;
-    position: relative;
-}
-.collapse:not(.show) {
-    display: none;
-}
-.accordion-wrapper .accordion-wrap .accordion-body {
-    padding: 0px 40px 30px;
-}
-.accordion-wrapper .accordion-wrap {
-    margin-bottom: 15px;
-    background: #fff;
-    box-shadow: 0 10px 30px 0 rgba(99, 99, 99, 0.15);
-}
-.accordion-wrapper .accordion-wrap .accordion-header button[aria-expanded=true] {
-    color: #363636;
-    background: #fff;
-    border-color: #fff;
-}
-.accordion-wrapper .accordion-wrap .accordion-header button {
-    font-size: 22px;
-    font-weight: 600;
-    color: #363636;
-    background: #fff;
-    width: 100%;
-    border: 2px solid #fff;
-    padding: 18px 50px 18px 40px;
-    text-align: left;
-    border-radius: 0;
-    position: relative;
-}.accordion-wrapper .accordion-wrap .accordion-body {
-    padding: 0px 40px 30px;
+
+/* Điều chỉnh cho màn hình nhỏ */
+@media (max-width: 768px) {
+    .signup-container {
+        flex-direction: column;
+    }
+
+    .signup-content {
+        padding: 20px;
+    }
+
+    .signup-form {
+        flex-direction: column;
+    }
+
+    .signup-form input, 
+    .signup-form button {
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
 }

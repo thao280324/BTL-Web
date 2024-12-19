@@ -3,7 +3,7 @@ footer h2,p{
 }
 footer{
     width: 100%;
-    background-color: #151f2d;
+    background-color: rgb(4, 4, 4);
     color:white;
     font-family:  'Open Sans', sans-serif;;
     line-height: 40px;

@@ -440,7 +440,7 @@ body{
 }
 .header-service h3{
     font-size: 30px;
-    color: #7dc642;
+    color: #4f8425;
 }
 
 .service .box-service{
@@ -606,7 +606,7 @@ body{
   
 .hotsale-container h3{
     font-family: sans-serif;
-	color: #7dc642;
+	color: #e91b4b;
     text-align: left;
 	font-size: 24px;
 }
@@ -628,7 +628,7 @@ body{
 
 #clockdiv {
 	font-family: sans-serif;
-	color: #7dc642;
+	color: #2c5f03;
 	display: inline-block;
 	text-align: center;
 	font-size: 30px;
@@ -639,8 +639,8 @@ body{
     border-width: 20px;
 	background: #fff;
     margin-right: 20px;
-	border-bottom: 4px solid #7dc642;
-	border-right: 4px solid #7dc642;
+	border-bottom: 4px solid #2d4a16;
+	border-right: 4px solid #2e5d07;
 	display: inline-block;
 }
   
