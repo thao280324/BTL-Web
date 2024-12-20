@@ -360,16 +360,43 @@
         </div>
     </footer>
     <div class="social-buttons" style="position: fixed; right: 20px; top: 50%; transform: translateY(-50%); display: flex; flex-direction: column; gap: 10px;">
-        <a href="tel:0986868686" class="social-button" style="width: 60px; height: 60px; display: flex; justify-content: center; align-items: center; border: 2px solid #fa314a; border-radius: 50%; background-color: white;">
+        <!-- Nút gọi điện -->
+        <a href="tel:0986868686" class="social-button" style="position: relative; width: 60px; height: 60px; display: flex; justify-content: center; align-items: center; border: 2px solid #fa314a; border-radius: 50%; background-color: white;">
+            <!-- Hiệu ứng sóng chuyển động -->
+            <span style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 2px solid rgba(250, 49, 74, 0.5); border-radius: 50%; animation: pulse 1.5s infinite;"></span>
+            <!-- Icon điện thoại -->
             <img src="https://img.icons8.com/ios-filled/30/fa314a/phone.png" alt="Phone">
         </a>
-        <a href="https://www.facebook.com/profile.php?id=61570313615062" class="social-button" target="_blank" style="width: 60px; height: 60px; display: flex; justify-content: center; align-items: center; border: 2px solid #0078FF; border-radius: 50%; background-color: white;">
-            <img src="https://img.icons8.com/fluency/30/000000/facebook-new.png" alt="facebook">
+    
+        <!-- Nút Facebook -->
+        <a href="https://www.facebook.com/profile.php?id=61570313615062" target="_blank" class="social-button" style="position: relative; width: 60px; height: 60px; display: flex; justify-content: center; align-items: center; border: 2px solid #0078FF; border-radius: 50%; background-color: white;">
+            <!-- Hiệu ứng sóng chuyển động -->
+            <span style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 2px solid rgba(0, 120, 255, 0.5); border-radius: 50%; animation: pulse 1.5s infinite;"></span>
+            <!-- Icon Facebook -->
+            <img src="https://img.icons8.com/fluency/30/000000/facebook-new.png" alt="Facebook">
         </a>
-        <a href="https://www.instagram.com/fit_freshdetox.healthy/" class="social-button" target="_blank" style="width: 60px; height: 60px; display: flex; justify-content: center; align-items: center; border: 2px solid #E1306C; border-radius: 50%; background-color: white;">
+    
+        <!-- Nút Instagram -->
+        <a href="https://www.instagram.com/fit_freshdetox.healthy/" target="_blank" class="social-button" style="position: relative; width: 60px; height: 60px; display: flex; justify-content: center; align-items: center; border: 2px solid #E1306C; border-radius: 50%; background-color: white;">
+            <!-- Hiệu ứng sóng chuyển động -->
+            <span style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 2px solid rgba(225, 48, 108, 0.5); border-radius: 50%; animation: pulse 1.5s infinite;"></span>
+            <!-- Icon Instagram -->
             <img src="https://img.icons8.com/fluency/30/000000/instagram-new.png" alt="Instagram">
         </a>
     </div>
+     <!-- Animation Keyframes -->
+     <style>
+        @keyframes pulse {
+            0% {
+                transform: scale(1); /* Kích thước ban đầu */
+                opacity: 1; /* Độ trong suốt ban đầu */
+            }
+            100% {
+                transform: scale(1.5); /* Sóng mở rộng lớn hơn */
+                opacity: 0; /* Sóng mờ dần khi mở rộng */
+            }
+        }
+    </style>
     
 
     <!-- js của vòng tròn % -->
