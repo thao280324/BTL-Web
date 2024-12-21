@@ -1,7 +1,7 @@
 // Dữ liệu sản phẩm
 var arrSP = [
     { tenSP: 'Detox Daily', hinh: 'images/sp16.png', gia: 500000 },
-    { tenSP: 'Detox Basic 3D', hinh: 'images/sp17.png', gia: 1000000 },
+    { tenSP: 'Detox 3 ngày', hinh: 'images/sp17.png', gia: 1000000 },
 ];
 
 // Biến toàn cục lưu danh sách sản phẩm
