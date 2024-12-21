@@ -119,4 +119,49 @@
 #sendButton:hover {
     background-color: #218838; /* Màu xanh lá đậm hơn khi hover */
 }
+/*tin tức nổi bật*/
+.featured-news {
+    background-color: #f9f9f9; /*màu nền*/
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
 
+.featured-news h3 {
+    background-color: #28a745; /*màu nền*/
+    color: #ebf3ed;
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.featured-news ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.featured-news ul li {
+    display: flex; /*CHỮ VÀ ẢNH NẰM NGANG*/
+    align-items: center; /*CĂN GIỮA THO CHIỀU DỌC*/
+    margin-bottom: 15px;
+}
+
+.featured-news ul li img {
+    width: 50px;
+    height: 50px; /*CHIEUF CAO CỦA ảnh tin tức*/
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.featured-news ul li a {
+    text-decoration: none;
+    color: #333; /*màu tieu đề tin tức*/
+    font-weight: bold; /* làm màu chữ đậm*/
+    transition: color 0.3s ease; 
+}
+
+.featured-news ul li a:hover {
+    color: #28a745; /*khi trỏ chuột chuaayenr qua màu xanh lá*/
+}
