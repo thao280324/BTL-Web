@@ -1,0 +1,80 @@
+.product-reviews {
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
+
+.review-list {
+    margin-bottom: 20px;
+}
+
+.review-item {
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+}
+
+.review-rating {
+    color: #FFD700; /* Màu vàng cho sao */
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+.add-review {
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
+
+.add-review h4 {
+    margin-bottom: 15px;
+}
+.btn.btn-primary {
+    background-color: #28a745; /* Màu xanh lá cây */
+}
+
+.btn.btn-primary:hover {
+    background-color: #218838; /* Màu xanh lá đậm hơn khi hover */
+
+}
+/* Container chính cho chat box */
+.chat-support {
+    position: fixed;
+    bottom: 20px; /* Cách đáy 20px */
+    right: 20px; /* Cách phải 20px */
+    z-index: 1000; /* Hiển thị trên các phần tử khác */
+}
+
+.chat-buttons {
+    display: flex;
+    flex-direction: column; /* Xếp nút theo cột */
+    gap: 10px; /* Khoảng cách giữa các nút */
+}
+
+.chat-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #007bff; /* Màu xanh dương */
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.chat-btn img {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px; /* Khoảng cách giữa biểu tượng và văn bản */
+}
+
+.chat-btn:hover {
+    background-color: #0056b3; /* Màu xanh đậm hơn khi hover */
+}
+
+.chat-btn span {
+    display: inline-block;
+}
+
