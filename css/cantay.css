@@ -1,0 +1,167 @@
+.product-reviews {
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
+.product-reviews h3 {
+    color: #28a745; /* Màu xanh lá cây */
+    font-weight: bold; /* Tùy chọn: Làm chữ đậm hơn */
+    text-align: left; /* Tùy chọn: Canh giữa tiêu đề */
+}
+
+
+.review-list {
+    margin-bottom: 20px;
+}
+
+.review-item {
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+}
+
+.review-rating {
+    color: #FFD700; /* Màu vàng cho sao */
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+.add-review {
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
+
+.add-review h4 {
+    margin-bottom: 15px;
+}
+.btn.btn-primary {
+    background-color: #28a745; /* Màu xanh lá cây */
+}
+
+.btn.btn-primary:hover {
+    background-color: #218838; /* Màu xanh lá đậm hơn khi hover */
+
+}
+
+/*chat box*/
+.chatbox-container {
+    position: fixed;
+    bottom: 20px; /* Đặt cách mép dưới của trình duyệt */
+    right: 20px; /* Đặt cách mép phải của trình duyệt */
+    width: 400px; /* Chiều rộng của chat box */
+    height: 500px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 9999; /* Đảm bảo luôn hiển thị trên các phần tử khác */
+    display: none; /* Mặc định ẩn chat box */
+}
+
+.chatbox-header {
+    background-color: #28a745;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chatbox-header h5 {
+    margin: 0;
+}
+
+.chatbox-close {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.chatbox-body {
+    padding: 10px;
+    font-size: 14px;
+}
+
+#chatboxToggle {
+    position: fixed;
+    bottom: 20px; /* Nằm cùng vị trí với chatbox */
+    right: 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 10000; /* Luôn nổi trên các phần tử khác */
+}
+#chatInput {
+    flex: 1; /* Để input chiếm toàn bộ không gian còn lại */
+    border: 1px solid #ddd; /* Đường viền cho input */
+    border-radius: 5px; /* Góc bo tròn */
+    padding: 8px; /* Khoảng cách bên trong input */
+    font-size: 14px; /* Cỡ chữ */
+    outline: none; /* Loại bỏ viền mặc định khi nhấn vào */
+    width: 300px;
+}
+
+#sendButton {
+    background-color: #28a745; /* Màu nền xanh lá cho nút gửi */
+    color: white; /* Màu chữ trắng */
+    border: none; /* Loại bỏ viền nút */
+    border-radius: 5px; /* Góc bo tròn */
+    padding: 8px 15px; /* Khoảng cách trong nút */
+    margin-left: 10px; /* Khoảng cách giữa nút gửi và input */
+    cursor: pointer; /* Thay đổi con trỏ khi hover */
+}
+
+#sendButton:hover {
+    background-color: #218838; /* Màu xanh lá đậm hơn khi hover */
+}
+/*tin tức nổi bật*/
+.featured-news {
+    background-color: #f9f9f9; /*màu nền*/
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.featured-news h3 {
+    background-color: #28a745; /*màu nền*/
+    color: #ebf3ed;
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.featured-news ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.featured-news ul li {
+    display: flex; /*CHỮ VÀ ẢNH NẰM NGANG*/
+    align-items: center; /*CĂN GIỮA THO CHIỀU DỌC*/
+    margin-bottom: 15px;
+}
+
+.featured-news ul li img {
+    width: 50px;
+    height: 50px; /*CHIEUF CAO CỦA ảnh tin tức*/
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.featured-news ul li a {
+    text-decoration: none;
+    color: #333; /*màu tieu đề tin tức*/
+    font-weight: bold; /* làm màu chữ đậm*/
+    transition: color 0.3s ease; 
+}
+
+.featured-news ul li a:hover {
+    color: #28a745; /*khi trỏ chuột chuaayenr qua màu xanh lá*/
+}
