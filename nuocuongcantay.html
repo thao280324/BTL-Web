@@ -16,19 +16,22 @@
         <link rel="stylesheet" href="css/header.css">
         <link rel="stylesheet" href="css/cantay.css">
     </head>
-    <div class="chat-support">
-        <div class="chat-buttons">
-            <button class="chat-btn" id="assistantBtn">
-                <img src="icons/assistant-icon.png" alt="Trợ lý" />
-                <span>Trợ lý</span>
-            </button>
-            <button class="chat-btn" id="newsBtn">
-                <img src="icons/news-icon.png" alt="Tin mới" />
-                <span>Tin mới</span>
-            </button>
+<!-- Chat Box -->
+<div class="chatbox-container">
+    <div class="chatbox-header">
+        <h5>T&P FreshFoods</h5>
+        <button class="chatbox-close" onclick="toggleChatBox()">×</button>
+    </div>
+    <div class="chatbox-body">
+        <p>Bắt đầu trò chuyện nhanh với T&P FreshFoods. Thông tin của bạn được ẩn và tin nhắn trò chuyện chỉ lưu trên trình duyệt web.</p>
+        <div id="chatMessages"></div> <!--hiển thị nội dung đã nhập tin nhắn-->
+        <div class="chatbox-input">
+            <input type="text" id="chatInput" placeholder="Nhập tin nhắn...">
+            <button id="sendButton" onclick="sendMessage()">Gửi</button>
         </div>
     </div>
-    
+</div>
+<button id="chatboxToggle" onclick="toggleChatBox()">Tư vấn</button>
 <body>
     <!-- HEADER -->
     <header>
@@ -197,29 +200,42 @@
             <span class="review-rating">${'★'.repeat(rating)}${'☆'.repeat(5 - rating)}</span>
             <p>${comment}</p>
         `;
-
         // Thêm đánh giá mới vào danh sách
         reviewList.appendChild(newReview);
-
         // Xóa nội dung form sau khi gửi
         reviewForm.reset();
     });
 });
-//CHAT BOX TIN TUC
-document.addEventListener('DOMContentLoaded', () => {
-    const assistantBtn = document.getElementById('assistantBtn');
-    const newsBtn = document.getElementById('newsBtn');
+//CHAT BOX
+function toggleChatBox() {
+    const chatBox = document.querySelector('.chatbox-container');
+    chatBox.style.display = chatBox.style.display === 'none' || chatBox.style.display === '' ? 'block' : 'none';
+}
 
-    assistantBtn.addEventListener('click', () => {
-        alert('Chức năng Trợ lý đang được phát triển!');
-        // Hoặc mở một cửa sổ trò chuyện ở đây
-    });
+function sendMessage() {
+    const input = document.getElementById('chatInput');
+    const chatMessages = document.getElementById('chatMessages');
 
-    newsBtn.addEventListener('click', () => {
-        alert('Hiển thị các tin mới!');
-        // Thêm mã xử lý hiển thị nội dung tin tức ở đây
-    });
-});
+    if (input.value.trim() !== '') {
+        // Tạo một dòng tin nhắn mới
+        const message = document.createElement('div');
+        message.textContent = input.value;
+        message.style.padding = '5px';
+        message.style.marginBottom = '5px';
+        message.style.borderRadius = '5px';
+        message.style.backgroundColor = '#e0ffe0'; // Màu nền tin nhắn
+        message.style.color = '#2d7a2d';
+
+        // Thêm tin nhắn vào hộp trò chuyện
+        chatMessages.appendChild(message);
+
+        // Cuộn xuống cuối chatbox
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+
+        // Xóa nội dung trong ô nhập liệu
+        input.value = '';
+    }
+}
 
 
     </script>
