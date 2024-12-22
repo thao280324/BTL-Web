@@ -7,7 +7,7 @@
     background-size: cover;
     text-align: center;
     font-family: "Signika", sans-serif;
-    height: 530px;
+    height: 700px;
     width: 400px;
     justify-items: center;
     border-radius: 20px;
@@ -25,11 +25,17 @@
     background-color: rgba(0, 0, 0, 0.4);
     
 }
-.rauanla >.rau-widget{
-    background-image: url('../images/rauanla.jpg');
+.thanhloccoban >.rau-widget{
+    background-image: url('../images/anhdanhmuc1.jpg');
 }
-.rauancu > .rau-widget{
-    background-image: url('../images/rauancu.jpg');
+.thanhlocgiamcangiammo > .rau-widget{
+    background-image: url('../images/anhdanhmuc2.jpg');
+}
+.thanhlocchuyensau > .rau-widget{
+    background-image: url('../images/anhdanhmuc3.jpg');
+}
+.juiceandsmoothie > .rau-widget{
+    background-image: url('../images/anhdanhmuc4.jpg');
 }
 .widget-content {
     color: white;
@@ -69,7 +75,7 @@
     width: 275px;
     height: 210px;
 }
-.rauanla,.rauancu{
+.thanhloccoban,.thanhlocgiamcangiammo, .thanhlocchuyensau, .juiceandsmoothie {
     display: flex;
    margin: 40px 40px; 
 
@@ -103,8 +109,8 @@
 
 .bookmark {
     position: relative;
-    min-height: 450px;
-    background-image: url(../images/sanpham.gif);
+    min-height: 550px;
+    background-image: url(../images/bg1.png);
     background-size: cover;
     text-align: center;
     font-family: "Signika", sans-serif;
@@ -145,29 +151,60 @@
 .content-bookmark a:hover{
     color:#7dc642;
 }
-.brand {
-    display: flex;
-    align-items: center;
-    background-image: url(../images/brand-bg.png);
-    background-color: #81c848;
-    flex-wrap: nowrap;
-    overflow-x: hidden; 
-    padding: 70px;
-    box-sizing: border-box;
-    /* margin-bottom: 50px; */
-}
-.brand-item {
-    flex: 0 0 auto;
-    width: 20%;
-    margin-right: 10px;
+
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 5 sản phẩm mỗi hàng */
+    gap: 20px; /* Khoảng cách giữa các sản phẩm */
 }
 
-.brand-item:last-child {
-    margin-right: 0;
+
+/* Thiết kế từng sản phẩm */
+.product {
+    text-align: center;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.brand-item img {
-    width: 100px; 
-    height: 100px;
-    object-fit: cover;
+.product:hover {
+    transform: translateY(-5px); /* Hiệu ứng khi hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.product img {
+    width: 250px;
+    height: 250px; /* Cố định chiều cao */
+    object-fit: cover; /* Giữ tỉ lệ ảnh, cắt nếu cần */
+    border-radius: 5px;
+}
+
+/* Tên và giá sản phẩm */
+.product-name {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 10px 0;
+    color: #333;
+}
+
+.product-price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+/* Đáp ứng màn hình nhỏ */
+@media (max-width: 768px) {
+    .product-list {
+        grid-template-columns: repeat(2, 1fr); /* 2 sản phẩm mỗi hàng */
+    }
+}
+
+@media (max-width: 480px) {
+    .product-list {
+        grid-template-columns: repeat(1, 1fr); /* 1 sản phẩm mỗi hàng */
+    }
 }
