@@ -1,7 +1,7 @@
 // Dữ liệu sản phẩm
 var arrSP = [
-    { tenSP: 'Detox Daily', hinh: 'images/sp16.png', gia: 500000 },
-    { tenSP: 'Detox 3 ngày', hinh: 'images/detox3ngay1.png', gia: 880000 },
+    { tenSP: 'Detox Daily', hinh: 'images/sp16.png', gia: 500000 ,link: "../detoxdaily.html"},
+    { tenSP: 'Detox 3 ngày', hinh: 'images/detox3ngay1.png', gia: 880000,link: "../detox3ngay.html"},
 ];
 
 // Biến toàn cục lưu danh sách sản phẩm
@@ -34,12 +34,14 @@ function hienSP(products, giaban_arr) {
 
         // Nếu sản phẩm phù hợp, thêm vào danh sách
         productList.innerHTML += `
-            <div class="product" data-price="${sp.gia}">
-                <img src="${sp.hinh}" alt="${sp.tenSP}">
+        <div class="product" data-price="${sp.gia}">
+            <a href="${sp.link ? sp.link : '#'}"> <!-- Thêm liên kết sản phẩm -->
+                <img src="${sp.hinh}" alt="${sp.tenSP}" class="product-image">
                 <p class="product-name">${sp.tenSP}</p>
                 <p class="product-price">${sp.gia.toLocaleString()}₫</p>
-            </div>
-        `;
+            </a>
+        </div>
+    `;
         hasProduct = true; // Có ít nhất 1 sản phẩm phù hợp
     });
 

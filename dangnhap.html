@@ -183,6 +183,7 @@
         </form>
        
     </div>
+
     <div class="overlay-container">
         <div class="overlay">
             <div class="overlay-panel overlay-left">
@@ -206,6 +207,20 @@
 <script src="js/header.js"></script>
 <script src="js/dangnhap.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-
+<!-- Tìm kiếm -->
+    <script>
+        document.getElementById('search-button').addEventListener('click', function () {
+            var query = document.getElementById('search-input').value.toLowerCase();
+            if (query === 'thanh lọc') {
+                window.location.href = 'thanhloccoban.html';
+            } else if (query === 'Detox 3 ngày') {
+                window.location.href = 'detox3ngay.html';
+            } else if (query === 'cần tây') {
+                window.location.href = 'nuocuongcantay.html';
+            } else {
+                alert('Không có sản phẩm');
+            }
+        });
+    </script>
 </body>
 </html>
