@@ -11,6 +11,23 @@
     <link rel="stylesheet" href="css/bookmark&brand.css">
     <link rel="stylesheet" href="css/root.css">
     <link rel="icon" href="images/logo.png" type = "image/x-icon">
+    <link rel="stylesheet" href="css/cantay.css">
+<!-- Chat Box -->
+<div class="chatbox-container">
+    <div class="chatbox-header">
+        <h5>T&P FreshFoods</h5>
+        <button class="chatbox-close" onclick="toggleChatBox()">×</button>
+    </div>
+    <div class="chatbox-body">
+        <p>Bắt đầu trò chuyện nhanh với <b>Fit&Fresh</b>. Giai đáp mọi thắc mắc của quý khách hàng.</p>
+        <div id="chatMessages"></div> <!--hiển thị nội dung đã nhập tin nhắn-->
+        <div class="chatbox-input">
+            <input type="text" id="chatInput" placeholder="Nhập tin nhắn...">
+            <button id="sendButton" onclick="sendMessage()">Gửi</button>
+        </div>
+    </div>
+</div>
+<button id="chatboxToggle" onclick="toggleChatBox()">Tư vấn</button>
 </head>
 <body>
     <!-- HEADER -->
@@ -160,6 +177,63 @@
                 alert('Không có sản phẩm');
             }
         });
+              //ĐÁNH GIÁ SẢN PHẨM
+              document.addEventListener('DOMContentLoaded', () => {
+    const reviewForm = document.getElementById('reviewForm');
+    const reviewList = document.querySelector('.review-list');
+
+    reviewForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const name = document.getElementById('reviewName').value;
+        const rating = document.getElementById('reviewRating').value;
+        const comment = document.getElementById('reviewComment').value;
+
+        // Tạo phần tử mới cho đánh giá
+        const newReview = document.createElement('div');
+        newReview.classList.add('review-item');
+        newReview.innerHTML = `
+            <strong>${name}</strong>
+            <span class="review-rating">${'★'.repeat(rating)}${'☆'.repeat(5 - rating)}</span>
+            <p>${comment}</p>
+        `;
+        // Thêm đánh giá mới vào danh sách
+        reviewList.appendChild(newReview);
+        // Xóa nội dung form sau khi gửi
+        reviewForm.reset();
+    });
+});
+//CHAT BOX
+function toggleChatBox() {
+    const chatBox = document.querySelector('.chatbox-container');
+    chatBox.style.display = chatBox.style.display === 'none' || chatBox.style.display === '' ? 'block' : 'none';
+}
+
+function sendMessage() {
+    const input = document.getElementById('chatInput');
+    const chatMessages = document.getElementById('chatMessages');
+
+    if (input.value.trim() !== '') {
+        // Tạo một dòng tin nhắn mới
+        const message = document.createElement('div');
+        message.textContent = input.value;
+        message.style.padding = '5px';
+        message.style.marginBottom = '5px';
+        message.style.borderRadius = '5px';
+        message.style.backgroundColor = '#e0ffe0'; // Màu nền tin nhắn
+        message.style.color = '#2d7a2d';
+
+        // Thêm tin nhắn vào hộp trò chuyện
+        chatMessages.appendChild(message);
+
+        // Cuộn xuống cuối chatbox
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+
+        // Xóa nội dung trong ô nhập liệu
+        input.value = '';
+    }
+}
+    </script>
     </script>
      <!-- CHI TIẾT Mix detox S13 -->
     <!-- POP UP thêm vào giỏi hàng -->
@@ -295,6 +369,81 @@
         </div>
     </div>
     <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <!-- Phần Đánh giá sản phẩm (giữ nguyên phần cũ) -->
+                <div class="product-reviews mt-4">
+                    <h3>Đánh giá sản phẩm</h3>
+                    <div class="review-list">
+                        <!-- Ví dụ đánh giá -->
+                        <div class="review-item">
+                            <strong>Nguyễn Văn A</strong>
+                            <span class="review-rating">★★★★★</span>
+                            <p>Sản phẩm rất tốt, chất lượng vượt mong đợi!</p>
+                        </div>
+                        <div class="review-item">
+                            <strong>Trần Thị B</strong>
+                            <span class="review-rating">★★★★☆</span>
+                            <p>Hương vị tuyệt vời, sẽ mua thêm lần sau.</p>
+                        </div>
+                    </div>
+                    <div class="add-review mt-3">
+                        <h4>Thêm đánh giá của bạn</h4>
+                        <form id="reviewForm">
+                            <div class="form-group mb-3">
+                                <label for="reviewName">Tên của bạn:</label>
+                                <input type="text" id="reviewName" class="form-control" placeholder="Nhập tên của bạn" required>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="reviewRating">Đánh giá:</label>
+                                <select id="reviewRating" class="form-control">
+                                    <option value="5">★★★★★ </option>
+                                    <option value="4">★★★★☆</option>
+                                    <option value="3">★★★☆☆ </option>
+                                    <option value="2">★★☆☆☆</option>
+                                    <option value="1">★☆☆☆☆ </option>
+                                </select>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="reviewComment">Nhận xét:</label>
+                                <textarea id="reviewComment" class="form-control" rows="3" placeholder="Viết nhận xét của bạn..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary ">Gửi đánh giá</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="featured-news">
+                    <h3>TIN TỨC NỔI BẬT</h3>
+                    <ul>
+                        <li>
+                            <img src="images/detox3ngay1.png" alt="Salad thải độc">
+                            <a href="file:///C:/Users/This%20PC/Documents/K%C3%8C%201/WEB/BTL/BTL-Web/chitiettintuc-1.html">
+                                Cơ chế thải độc cơ thể tự nhiên có thể bạn chưa biết!
+                            </a>
+                        </li>
+                        <li>
+                            <img src="images/detoxclean1.png" alt="La’Zen">
+                            <a href="file:///C:/Users/This%20PC/Documents/K%C3%8C%201/WEB/BTL/BTL-Web/chitiettintuc-2.html">
+                                Nước ép cần tây có tác dụng gì? Hướng dẫn cách uống nước cần tây lành mạnh</a>
+                        </li>
+                        <li>
+                            <img src="images/thumb1.png" alt="Catalog Tết">
+                            <a href="file:///C:/Users/This%20PC/Documents/K%C3%8C%201/WEB/BTL/BTL-Web/chitiettintuc-3.html">
+                                Các dấu hiệu cảnh báo cơ thể cần được thanh lọc</a>
+                        </li>
+                        <li>
+                            <img src="images/detox3ngay3.png" alt="Quà Tết">
+                            <a href="file:///C:/Users/This%20PC/Documents/K%C3%8C%201/WEB/BTL/BTL-Web/chitiettintuc-4.html">
+                                Smoothie là gì? Có phải là đồ uống vừa lạ vừa quen?
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
         <div class="section-tabs mt-4">
             <ul class="nav nav-tabs" id="myTab" role="tablist">
                 <li class="nav-item">
@@ -336,13 +485,13 @@
                         <div class="food-container">
                             <button class="scroll-btn left" onclick="customscrollLeft()">&#10094;</button>
                             <div class="food-scroll">
-                                <div class="food-item"><img src="images/saladdualeo.jpg" ><p>Mix detox S13 - táo - chanh</p></div>  <!--thay ảnh-->
-                                <div class="food-item"><img src="images/dualeobat.jpg" ><p>Mix detox S13 - dứa</p></div>
-                                <div class="food-item"><img src="images/dualeone.jpg" ><p>Mix detox S13 - cà rốt - táo</p></div>
-                                <div class="food-item"><img src="images/dualeosalad.jpg" ><p>Mix detox S13 - dưa chuột - bạc hà</p></div>
-                                <div class="food-item"><img src="images/dualeosalad.jpg" ><p>Mix detox S13 - nước chanh - dưa chuột</p></div>
-                                <div class="food-item"><img src="images/dualeosalad.jpg" ><p>Mix detox S13 - nước dứa - bạc hà</p></div>
-                                <div class="food-item"><img src="images/dualeosalad.jpg" ><p>Mix detox S13 - trà thảo mộc</p></div>
+                                <div class="food-item"><img src="images/mix7.jpg" ><p>Mix detox S13 - táo - chanh</p></div>  <!--thay ảnh-->
+                                <div class="food-item"><img src="images/1cantay.jpeg" ><p>Mix detox S13 - dứa</p></div>
+                                <div class="food-item"><img src="images/2cantay.jpg" ><p>Mix detox S13 - cà rốt - táo</p></div>
+                                <div class="food-item"><img src="images/mix3.jpg" ><p>Mix detox S13 - dưa chuột - bạc hà</p></div>
+                                <div class="food-item"><img src="images/mix2.jpg" ><p>Mix detox S13 - nước chanh - dưa chuột</p></div>
+                                <div class="food-item"><img src="images/mix6.png" ><p>Mix detox S13 - nước dứa - bạc hà</p></div>
+                                <div class="food-item"><img src="images/mix4.webp" ><p>Mix detox S13 - trà thảo mộc</p></div>
 
                             </div>
                             <button class="scroll-btn right" onclick="customscrollRight()">&#10095;</button>
@@ -366,34 +515,34 @@
         </div>
     </div>
     <div class="similar-products ">
-            <h2 class="text-center">Sản phẩm tương tự</h2> <!--add sản phẩm chi tiết khác đã làm-->
-            <div class="row g-4">
-                <div class="col-md-3">
-                    <a href=""> 
-                        <img src="images/bingoi2mau.jpg" alt="">
-                        <p class="product-name">Bí ngòi hai màu</p>
-                    </a>
-                </div>
-                <div class="col-md-3">
-                    <a href=""> 
-                        <img src="images/cachuacherrytron.jpg" alt="">
-                        <p class="product-name">Cà chua cherry tròn</p>
-                    </a>
-                </div>
-                <div class="col-md-3">
-                    <a href=""> 
-                        <img src="images/bingoixanh.jpg" alt="">
-                        <p class="product-name">Bí ngòi xanh</p>
-                    </a>
-                </div>
-                <div class="col-md-3">
-                    <a href=""> 
-                        <img src="images/bingoivang.jpg" alt="">
-                        <p class="product-name">Bí ngòi vàng</p>
-                    </a>
-                </div>
-        </div>
+        <h2 class="text-center">Sản phẩm tương tự</h2> <!--add sản phẩm chi tiết khác đã làm-->
+        <div class="row g-4">
+            <div class="col-md-3">
+                <a href=""> 
+                    <img src="images/detox3ngay1.png" alt="">
+                    <p class="product-name">Detox 3 ngày</p>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href=""> 
+                    <img src="images/detoxclean1.png" alt="">
+                    <p class="product-name"> Detox clean</p>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href=""> 
+                    <img src="images/detoxclean2.png" alt="">
+                    <p class="product-name"> Thanh lọc cơ thể</p>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href=""> 
+                    <img src="images/detox3ngay2.png" alt="">
+                    <p class="product-name">Detox S13</p>
+                </a>
+            </div>
     </div>
+</div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/dualeotini.js"></script>
@@ -406,11 +555,8 @@
         <div class="footer-container">
             <div class="footer-info">
                 <img src="images/logo.png" width="130px" height="100px" alt="logo">
-                <li><a href="rauanqua.html">Thanh lọc cơ bản</a></li>
-                <li><a href="rauancu.html">Thanh lọc-Giảm cân-Giảm mỡ</a></li>
-                <li><a href="rauanla.html">Thanh lọc chuyên sâu</a></li>
-                <li><a href="rauanla.html">Juice and Smoothie</a></li>
-                <h2>Các chi nhánh</h3>
+                <h2>Fit & Fresh Detox</h2>
+                <h2>Các chi nhánh</h2>
                     <p>Cơ sở 1: 12 Chùa Bộc, Đống Đa, Hà Nội</p>
                     <p>Cơ sở 2: 86 Nguyễn Ngọc Nại,Thanh Xuân, Hà Nội</p>
                     <a href="mailto:fit&fresh@gmail.com" class="contact"><svg xmlns="http://www.w3.org/2000/svg"
@@ -428,50 +574,40 @@
                         0986868686</a>
             </div>
             <div class="footer-gioithieu">
-                <h3>Giới Thiệu</h3>
+                <h3>Hỗ trợ</h3>
                 <ul>
-                    <li><a href="">>> &nbsp; Giới thiệu</a></li>
-                    <li><a href="">>> &nbsp; Tin tức</a></li>
-                    <li><a href="">>> &nbsp; Liên hệ</a></li>
+                    <li><a href="gioithieu.html">>> &nbsp; Giới thiệu</a></li>
+                    <li><a href="tintuc.html">>> &nbsp; Tin tức</a></li>
+                    <li><a href="lienhe.html">>> &nbsp; Liên hệ</a></li>
                 </ul>
             </div>
             <div class="footer-sanpham">
                 <h3>Sản Phẩm</h3>
                 <ul>
-                    <li><a href="rauanqua.html">Thanh lọc cơ bản</a></li>
-                    <li><a href="rauancu.html">Thanh lọc-Giảm cân-Giảm mỡ</a></li>
-                    <li><a href="rauanla.html">Thanh lọc chuyên sâu</a></li>
-                    <li><a href="rauanla.html">Juice and Smoothie</a></li>
+                    <li><a href="thanhloccoban.html">Thanh lọc cơ bản</a></li>
+                    <li><a href="thanhlocgiamcan.html">Thanh lọc-Giảm cân-Giảm mỡ</a></li>
+                    <li><a href="thanhlocchuyensau.html">Thanh lọc chuyên sâu</a></li>
+                    <li><a href="JuiceandSmoothie.html">Juice and Smoothie</a></li>
                 </ul>
             </div>
-            <div class="footer-phanphoi">
-                <h3>Hệ Thống Phân Phối</h3>
-                <ul class="image-container">
-                    <li class="footer-item">
-                        <img src="https://aeonmall-vietnam.com/wp-content/uploads/2017/01/intro-aeon-logo-vi.jpg"
-                            alt="eon" class="footer-img" style="width: 50px; height: 50px;">
-                    </li>
-                    <li class="footer-item">
-                        <img src="https://thisomallsala.vn:441/Resource/Images/Outlet/EMART10/Icon/Icon_200_200.webp"
-                            alt="" class="footer-img" style="width: 50px; height: 50px;">
-                    </li>
-                    <li class="footer-item">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9Lq1y9qMuZVnIL2943ii6xNSeuYOwTLmZYA&s"
-                            alt="" class="footer-img" style="width: 50px; height: 50px;">
-                    </li>
-                    <li class="footer-item">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbSB_3Yx-dFU9rNdQqfLb2c9DIwIjtSCqlJA&s"
-                            alt="" class="footer-img" style="width: 50px; height: 50px;">
-                    </li>
-                    <li class="footer-item">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQICNVhNtu201wydLMcf3xqQm3aSJvArGC5Lg&s"
-                            alt="" class="footer-img" style="width: 50px; height: 50px;">
-                    </li>
-                    <li class="footer-item">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSITUlThEepRoXaHMbr8-cQd1NRNHYW08Ouew&s"
-                            alt="" class="footer-img" style="width: 50px; height: 50px;">
-                    </li>
-                </ul>
+            <div class="footer-map">
+                <h3>Bản đồ đến cửa hàng</h3>
+                <div class="map-container">
+                    <div class="branch">
+                        <p><strong>Cơ sở 1:</strong> 12 Chùa Bộc, Đống Đa, Hà Nội</p>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.768131927345!2d105.824113314245!3d21.03642179280496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab850a2b2e2d%3A0xdb7ecfe2d60b2237!2zMTIgQ2jhu6MgQuG7m2MsIMSQ4buZbmcgxJDhuqE!5e0!3m2!1sen!2s!4v1686888888888"
+                            width="180" height="130" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div class="branch">
+                        <p><strong>Cơ sở 2:</strong> 86 Nguyễn Ngọc Nại, Thanh Xuân, Hà Nội</p>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.8888888!2d105.810888888!3d21.004888888!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab88888888%3A0x123456789abcdef!2zODYgTmfFqW4gTmfhu41jIE7hu5FpLCBUaGFuaCBYdeG6p24sIEjDoG5v4buNYQ!5e0!3m2!1sen!2s!4v1686888888889"
+                            width="180" height="130" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
             </div>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -480,9 +616,47 @@
                     viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
                     <path fill="#ffffff"
                         d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM199.4 312.6c-31.2-31.2-31.2-81.9 0-113.1s81.9-31.2 113.1 0c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9c-50-50-131-50-181 0s-50 131 0 181s131 50 181 0c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0c-31.2 31.2-81.9 31.2-113.1 0z" />
-                </svg>&nbsp;2024 Fit&Fresh- Lập trình và thiết kế bởi Nhóm 8</p>
+                </svg>&nbsp;2024 Fit&Fresh- Lập trình và thiết kế bởi Nhóm 10</p>
         </div>
     </footer>
+    <div class="social-buttons" style="position: fixed; right: 20px; top: 50%; transform: translateY(-50%); display: flex; flex-direction: column; gap: 10px;">
+        <!-- Nút gọi điện -->
+        <a href="tel:0986868686" class="social-button" style="position: relative; width: 60px; height: 60px; display: flex; justify-content: center; align-items: center; border: 2px solid #fa314a; border-radius: 50%; background-color: white;">
+            <!-- Hiệu ứng sóng chuyển động -->
+            <span style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 2px solid rgba(250, 49, 74, 0.5); border-radius: 50%; animation: pulse 1.5s infinite;"></span>
+            <!-- Icon điện thoại -->
+            <img src="https://img.icons8.com/ios-filled/30/fa314a/phone.png" alt="Phone">
+        </a>
+    
+        <!-- Nút Facebook -->
+        <a href="https://www.facebook.com/profile.php?id=61570313615062" target="_blank" class="social-button" style="position: relative; width: 60px; height: 60px; display: flex; justify-content: center; align-items: center; border: 2px solid #0078FF; border-radius: 50%; background-color: white;">
+            <!-- Hiệu ứng sóng chuyển động -->
+            <span style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 2px solid rgba(0, 120, 255, 0.5); border-radius: 50%; animation: pulse 1.5s infinite;"></span>
+            <!-- Icon Facebook -->
+            <img src="https://img.icons8.com/fluency/30/000000/facebook-new.png" alt="Facebook">
+        </a>
+    
+        <!-- Nút Instagram -->
+        <a href="https://www.instagram.com/fit_freshdetox.healthy/" target="_blank" class="social-button" style="position: relative; width: 60px; height: 60px; display: flex; justify-content: center; align-items: center; border: 2px solid #E1306C; border-radius: 50%; background-color: white;">
+            <!-- Hiệu ứng sóng chuyển động -->
+            <span style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 2px solid rgba(225, 48, 108, 0.5); border-radius: 50%; animation: pulse 1.5s infinite;"></span>
+            <!-- Icon Instagram -->
+            <img src="https://img.icons8.com/fluency/30/000000/instagram-new.png" alt="Instagram">
+        </a>
+    </div>
+    <!-- Animation Keyframes -->
+    <style>
+        @keyframes pulse {
+            0% {
+                transform: scale(1); /* Kích thước ban đầu */
+                opacity: 1; /* Độ trong suốt ban đầu */
+            }
+            100% {
+                transform: scale(1.5); /* Sóng mở rộng lớn hơn */
+                opacity: 0; /* Sóng mờ dần khi mở rộng */
+            }
+        }
+    </style>
     <script src="js/header.js"></script>
 </body>
 </html>
