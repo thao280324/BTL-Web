@@ -165,3 +165,112 @@
 .featured-news ul li a:hover {
     color: #28a745; /*khi trỏ chuột chuaayenr qua màu xanh lá*/
 }
+
+/* Responsive cho màn hình nhỏ (max-width: 768px) */
+@media (max-width: 768px) {
+    /* Đánh giá sản phẩm */
+    .product-reviews h3 {
+        font-size: 16px; /* Giảm kích thước tiêu đề đánh giá */
+        text-align: center; /* Căn giữa tiêu đề */
+    }
+
+    .review-rating {
+        font-size: 12px; /* Giảm kích thước sao đánh giá */
+    }
+
+    /* Chatbox */
+    .chatbox-container {
+        width: 90%; /* Chatbox chiếm 90% chiều rộng màn hình */
+        height: 400px; /* Giảm chiều cao chatbox */
+    }
+
+    #chatboxToggle {
+        padding: 8px 12px; /* Thu nhỏ nút mở chatbox */
+        font-size: 14px; /* Giảm kích thước chữ */
+    }
+
+    #chatInput {
+        width: 100%; /* Input chiếm toàn bộ chiều rộng */
+    }
+
+    #sendButton {
+        padding: 8px 12px; /* Thu nhỏ nút gửi */
+        font-size: 14px; /* Giảm kích thước chữ nút gửi */
+    }
+
+    /* Tin tức nổi bật */
+    .featured-news {
+        padding: 15px; /* Giảm padding của khối tin tức */
+    }
+
+    .featured-news h3 {
+        font-size: 16px; /* Giảm kích thước tiêu đề */
+    }
+
+    .featured-news ul li img {
+        width: 40px; /* Giảm kích thước ảnh */
+        height: 40px;
+    }
+
+    .featured-news ul li a {
+        font-size: 14px; /* Giảm kích thước chữ */
+    }
+}
+
+/* Responsive cho màn hình rất nhỏ (max-width: 480px) */
+@media (max-width: 480px) {
+    /* Đánh giá sản phẩm */
+    .product-reviews h3 {
+        font-size: 14px; /* Giảm kích thước tiêu đề đánh giá hơn nữa */
+        line-height: 18px;
+    }
+
+    .review-item {
+        padding: 8px 0; /* Giảm khoảng cách giữa các đánh giá */
+    }
+
+    /* Chatbox */
+    .chatbox-container {
+        width: 100%; /* Chatbox chiếm toàn bộ chiều rộng */
+        height: 300px; /* Tiếp tục giảm chiều cao chatbox */
+        border-radius: 5px; /* Giảm bo góc */
+    }
+
+    .chatbox-header {
+        font-size: 14px; /* Giảm kích thước chữ tiêu đề chatbox */
+    }
+
+    #chatboxToggle {
+        padding: 6px 10px; /* Thu nhỏ nút mở chatbox hơn nữa */
+        font-size: 12px; /* Giảm kích thước chữ */
+    }
+
+    #chatInput {
+        font-size: 12px; /* Giảm kích thước chữ trong input */
+    }
+
+    #sendButton {
+        padding: 6px 10px; /* Thu nhỏ nút gửi hơn nữa */
+        font-size: 12px; /* Giảm kích thước chữ */
+    }
+
+    /* Tin tức nổi bật */
+    .featured-news {
+        padding: 10px; /* Giảm thêm padding */
+        margin-top: 15px; /* Giảm khoảng cách trên */
+    }
+
+    .featured-news h3 {
+        font-size: 14px; /* Giảm kích thước tiêu đề */
+    }
+
+    .featured-news ul li img {
+        width: 30px; /* Giảm thêm kích thước ảnh */
+        height: 30px;
+    }
+
+    .featured-news ul li a {
+        font-size: 12px; /* Giảm thêm kích thước chữ */
+    }
+}
+

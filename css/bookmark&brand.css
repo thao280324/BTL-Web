@@ -67,3 +67,60 @@
     height: 100px;
     object-fit: cover;
 }
+/* Responsive cho màn hình nhỏ */
+@media (max-width: 768px) {
+    /* Responsive cho .bookmark */
+    .bookmark {
+        min-height: 300px; /* Giảm chiều cao */
+        background-size: contain; /* Điều chỉnh nền */
+    }
+
+    .content-bookmark > div {
+        padding-top: 100px; /* Giảm khoảng cách */
+    }
+
+    .content-bookmark > div h1 {
+        font-size: 40px; /* Giảm kích thước tiêu đề */
+    }
+
+    .content-bookmark > div h3 {
+        font-size: 20px; /* Giảm kích thước phụ đề */
+    }
+
+    /* Responsive cho .brand */
+    .brand {
+        flex-wrap: wrap; /* Chuyển từ hàng ngang sang hàng dọc */
+        padding: 20px; /* Giảm padding */
+    }
+
+    .brand-item {
+        width: 50%; /* Mỗi item chiếm 50% chiều rộng */
+        margin-bottom: 20px; /* Thêm khoảng cách giữa các item */
+        text-align: center; /* Căn giữa nội dung */
+    }
+
+    .brand-item img {
+        width: 80px; /* Giảm kích thước ảnh */
+        height: 80px;
+    }
+}
+
+/* Responsive cho màn hình rất nhỏ (dưới 480px) */
+@media (max-width: 480px) {
+    .content-bookmark > div h1 {
+        font-size: 30px; /* Giảm kích thước tiêu đề */
+    }
+
+    .content-bookmark > div h3 {
+        font-size: 16px; /* Giảm kích thước phụ đề */
+    }
+
+    .brand-item {
+        width: 100%; /* Mỗi item chiếm toàn bộ chiều rộng */
+    }
+
+    .brand-item img {
+        width: 60px; /* Giảm kích thước ảnh hơn nữa */
+        height: 60px;
+    }
+}

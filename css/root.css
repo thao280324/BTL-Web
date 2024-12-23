@@ -97,3 +97,50 @@ a {
     transform: translate(-50%, -50%);
   }
 }
+/* Responsive cho màn hình nhỏ (max-width: 768px) */
+@media (max-width: 768px) {
+  #popup {
+    width: 300px; /* Giảm chiều rộng popup */
+    padding: 15px; /* Giảm padding */
+  }
+
+  #popup h2 {
+    font-size: 20px; /* Giảm kích thước tiêu đề */
+  }
+
+  #popup p {
+    font-size: 14px; /* Giảm kích thước chữ nội dung */
+    margin-bottom: 20px; /* Giảm khoảng cách */
+  }
+
+  #close-popup {
+    font-size: 14px; /* Giảm kích thước chữ của nút */
+    padding: 8px 20px; /* Giảm padding của nút */
+  }
+}
+
+/* Responsive cho màn hình rất nhỏ (max-width: 480px) */
+@media (max-width: 480px) {
+  #popup {
+    width: 90%; /* Popup chiếm 90% chiều rộng màn hình */
+    padding: 10px; /* Giảm thêm padding */
+    border-radius: 10px; /* Giảm bo góc */
+  }
+
+  #popup h2 {
+    font-size: 18px; /* Giảm thêm kích thước tiêu đề */
+    margin-bottom: 8px; /* Giảm khoảng cách dưới */
+  }
+
+  #popup p {
+    font-size: 12px; /* Giảm thêm kích thước chữ */
+    margin-bottom: 15px; /* Giảm thêm khoảng cách dưới */
+  }
+
+  #close-popup {
+    font-size: 12px; /* Thu nhỏ kích thước chữ của nút */
+    padding: 6px 15px; /* Giảm thêm padding */
+    border-radius: 3px; /* Giảm bo góc nút */
+  }
+}
+

@@ -373,23 +373,23 @@ li {
     font-family: "Signika", sans-serif;
 }
 
-/* Section morri */
+/* Section fitfresh */
 
-.morri {}
+.fitfresh {}
 
-.morri .container {}
+.fitfresh .container {}
 
-.morri__content {
+.ff__content {
     padding-top: 100px;
     padding-bottom: 70px;
 
 }
 
-.morri__content-title {
+.ff__content-title {
     margin: 0 auto;
 }
 
-.morri__content-title h5 {
+.ff__content-title h5 {
     color: #7dc642;
     font-size: 24px;
     font-weight: 700;
@@ -399,7 +399,7 @@ li {
 
 }
 
-.morri__content-title h3 {
+.ff__content-title h3 {
     color: #363636;
     font-family: "Signika", sans-serif;
     font-size: 45px;
@@ -551,4 +551,112 @@ li {
     font-size: 16px;
     line-height: 28px;
     margin-bottom: 0;
+}
+/* Responsive cho màn hình nhỏ (max-width: 768px) */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 10px; /* Giảm padding của container */
+    }
+
+    .hero__content-title {
+        font-size: 40px; /* Giảm kích thước tiêu đề */
+        line-height: 50px;
+    }
+
+    .hero__content-list li {
+        font-size: 20px; /* Giảm kích thước chữ trong danh sách */
+        line-height: 24px;
+    }
+
+    .infor__content {
+        flex-direction: column; /* Chuyển các phần tử sang dạng cột */
+        gap: 20px;
+    }
+
+    .service-wrap-3 {
+        padding: 20px; /* Giảm padding của dịch vụ */
+    }
+
+    .service-icon {
+        width: 120px; /* Giảm kích thước biểu tượng dịch vụ */
+        height: 100px;
+    }
+
+    .service-details h4 {
+        font-size: 20px; /* Giảm kích thước tiêu đề dịch vụ */
+    }
+
+    .take-care-of .container {
+        width: 100%; /* Mở rộng container trên màn hình nhỏ */
+    }
+
+    .take-care-of__content h3 {
+        font-size: 40px; /* Giảm kích thước tiêu đề */
+        padding: 0 50px;
+    }
+
+    .fitfresh .container {
+        padding: 20px; /* Giảm padding của section */
+    }
+
+    .choose-us-thumb {
+        max-width: 80%; /* Giảm kích thước ảnh */
+        margin: 0 auto; /* Căn giữa ảnh */
+    }
+
+    .choose .content {
+        max-width: 90%; /* Giảm chiều rộng nội dung chữ */
+        margin: 0 auto; /* Căn giữa nội dung */
+    }
+
+    .choose-us-list-2 {
+        flex-direction: column; /* Sắp xếp danh sách theo cột */
+    }
+
+    .choose-us-list-2 .choose-list-icon {
+        margin: 0 auto 20px; /* Căn giữa biểu tượng */
+    }
+}
+
+/* Responsive cho màn hình rất nhỏ (max-width: 480px) */
+@media (max-width: 480px) {
+    .hero__content-title {
+        font-size: 28px; /* Giảm thêm kích thước tiêu đề */
+        line-height: 36px;
+    }
+
+    .hero__content-list li {
+        font-size: 16px; /* Giảm kích thước chữ danh sách */
+    }
+
+    .infor__content-title h3 {
+        font-size: 30px; /* Giảm kích thước tiêu đề thông tin */
+        line-height: 36px;
+    }
+
+    .service-wrap-3 {
+        padding: 15px; /* Giảm padding hơn nữa */
+    }
+
+    .service-icon {
+        width: 80px; /* Giảm kích thước biểu tượng dịch vụ */
+        height: 60px;
+    }
+
+    .service-details h4 {
+        font-size: 18px; /* Giảm kích thước tiêu đề dịch vụ */
+    }
+
+    .take-care-of__content h3 {
+        font-size: 28px; /* Giảm kích thước tiêu đề video */
+        padding: 0 20px;
+    }
+
+    .choose-us-thumb {
+        max-width: 100%; /* Mở rộng ảnh theo chiều rộng */
+    }
+
+    .choose .content {
+        max-width: 100%; /* Mở rộng nội dung chữ */
+    }
 }

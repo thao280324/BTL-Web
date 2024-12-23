@@ -256,3 +256,71 @@ input{
 .social-container a:hover{
     border: 1px solid #7dc642;
 }
+/* Responsive cho màn hình nhỏ (max-width: 768px) */
+@media (max-width: 768px) {
+    .body {
+        height: auto; /* Cho phép chiều cao tự điều chỉnh */
+        flex-direction: column;
+        padding: 20px; /* Thêm khoảng cách nội dung */
+    }
+
+    .container {
+        width: 90%; /* Thu nhỏ kích thước container */
+        min-height: 600px; /* Tăng chiều cao tối thiểu */
+        border-radius: 15px; /* Giảm bo góc */
+    }
+
+    .form-container {
+        width: 100%; /* Chiếm toàn bộ chiều rộng */
+    }
+
+    .login-container, .register-container {
+        width: 100%; /* Chiếm toàn bộ chiều rộng */
+        left: 0; /* Căn về phía trái */
+    }
+
+    .overlay-container {
+        display: none; /* Ẩn overlay trên màn hình nhỏ */
+    }
+
+    button {
+        padding: 10px 60px; /* Giảm kích thước nút */
+        font-size: 14px; /* Giảm kích thước chữ */
+    }
+
+    input {
+        padding: 10px 12px; /* Giảm padding của ô nhập */
+    }
+}
+
+/* Responsive cho màn hình rất nhỏ (max-width: 480px) */
+@media (max-width: 480px) {
+    h1.title {
+        font-size: 28px; /* Giảm kích thước tiêu đề */
+        line-height: 32px;
+    }
+
+    p {
+        font-size: 12px; /* Giảm kích thước chữ */
+        line-height: 16px;
+        margin: 15px 0; /* Giảm khoảng cách */
+    }
+
+    .container {
+        min-height: 500px; /* Điều chỉnh chiều cao tối thiểu */
+    }
+
+    button {
+        padding: 8px 40px; /* Thu nhỏ nút hơn nữa */
+        font-size: 12px; /* Giảm kích thước chữ nút */
+    }
+
+    input {
+        font-size: 12px; /* Giảm kích thước chữ trong ô nhập */
+    }
+
+    .social-container a {
+        height: 30px; /* Thu nhỏ biểu tượng mạng xã hội */
+        width: 30px;
+    }
+}

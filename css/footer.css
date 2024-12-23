@@ -70,28 +70,58 @@ footer a:hover{
     gap: 10px; 
 }
 
-/* reponsive footer */
-@media (max-width: 1200px){
-    .footer-container{
-        margin-left: 3%;
+/* Responsive cho màn hình nhỏ (max-width: 768px) */
+@media (max-width: 768px) {
+    footer {
+        padding: 30px 10px; /* Giảm padding để tiết kiệm không gian */
     }
-}
-@media (max-width: 767px) {
+
     .footer-container {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column; /* Chuyển thành dạng cột */
+        align-items: center; /* Căn giữa các phần tử */
         text-align: center;
     }
+
     .footer-container > * {
-        margin-right: 0 !important;
-        margin-bottom: 20px;
+        margin-bottom: 20px; /* Thêm khoảng cách giữa các phần tử */
+        margin-right: 0 !important; /* Xóa khoảng cách ngang */
     }
+
+    .footer-container h3, .footer-container h2 {
+        font-size: 18px; /* Giảm kích thước tiêu đề */
+    }
+
+    .footer-bottom {
+        width: 100%; /* Đảm bảo chiều rộng 100% trên màn hình nhỏ */
+        font-size: 14px; /* Giảm kích thước chữ */
+    }
+
     .image-container {
-        width: 100%;
-        height: auto;
+        width: 100%; /* Mở rộng chiều rộng hình ảnh */
+        gap: 5px; /* Giảm khoảng cách giữa các hình ảnh */
         justify-content: center;
     }
-    .footer-bottom {
-        width: 100%;
+}
+
+/* Responsive cho màn hình rất nhỏ (max-width: 480px) */
+@media (max-width: 480px) {
+    footer {
+        padding: 20px 5px; /* Giảm padding hơn nữa */
+        font-size: 16px; /* Giảm kích thước chữ tổng thể */
+    }
+
+    .footer-container h3, .footer-container h2 {
+        font-size: 16px; /* Giảm kích thước tiêu đề */
+        line-height: 24px; /* Điều chỉnh dòng chữ */
+    }
+
+    .footer-bottom p {
+        font-size: 12px; /* Giảm kích thước chữ trong phần thông tin cuối */
+        padding-top: 10px; /* Giảm khoảng cách trên */
+    }
+
+    .image-container {
+        gap: 2px; /* Thu nhỏ khoảng cách giữa các hình ảnh */
     }
 }
+
