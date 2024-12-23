@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-.rau-widget{
+.thanhloc-widget{
     display: flex;
     justify-content: center; 
     align-items: center; 
@@ -15,7 +15,7 @@
     gap:20px;
 
 }
-.rau-widget::before {
+.thanhloc-widget::before {
     content: '';
     position: absolute;
     top: 0;
@@ -25,16 +25,16 @@
     background-color: rgba(0, 0, 0, 0.4);
     
 }
-.thanhloccoban >.rau-widget{
+.thanhloccoban >.thanhloc-widget{
     background-image: url('../images/anhdanhmuc1.jpg');
 }
-.thanhlocgiamcangiammo > .rau-widget{
+.thanhlocgiamcangiammo > .thanhloc-widget{
     background-image: url('../images/anhdanhmuc2.jpg');
 }
-.thanhlocchuyensau > .rau-widget{
+.thanhlocchuyensau > .thanhloc-widget{
     background-image: url('../images/anhdanhmuc3.jpg');
 }
-.juiceandsmoothie > .rau-widget{
+.juiceandsmoothie > .thanhloc-widget{
     background-image: url('../images/anhdanhmuc4.jpg');
 }
 .widget-content {
@@ -62,49 +62,9 @@
     background: #408e00;
     color:white;
 }
-.rau-list{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 900px;
-    gap:10px;
-    margin-left: 70px;
-}
-
-.rau-list img{
-    width: 275px;
-    height: 210px;
-}
 .thanhloccoban,.thanhlocgiamcangiammo, .thanhlocchuyensau, .juiceandsmoothie {
     display: flex;
    margin: 40px 40px; 
-
-}
-.rauanqua{
-    margin-top:80px;
-    margin-bottom: 50px;
-}
-.rauanqua .rau-list{
-    width: 100%;
-    margin:0px;
-    margin-top:30px;
-}
-.rauanqua h3 {
-    font-family: "Signika", sans-serif;
-    font-size: 30px;
-    text-align: center;
-   
-}
-.rauanqua h3 a{
-    color:var(--productname--color)
-}
-.rauanqua h3 a:hover{
-    color: #224503;
-}
-
-.rau-list p{
-    margin-top: 20px;
-   
 }
 
 .bookmark {

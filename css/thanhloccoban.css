@@ -128,19 +128,52 @@ main {
 /* ======= Phần tiêu đề ======= */
 .bookmark {
     position: relative;
-    background-image: url('../images/bg1.png');
-    background-size: cover; /* Đảm bảo ảnh phủ kín phần nền */
-    background-position: center; /* Căn giữa ảnh */
-    background-repeat: no-repeat; /* Không lặp lại ảnh */
-    height: 430px; /* Co ngắn chiều cao */
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    min-height: 550px;
+    background-image: url(../images/bg1.png);
+    background-size: cover;
+    text-align: center;
+    font-family: "Signika", sans-serif;
+        
+}
+
+.bookmark::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.content-bookmark {
+    position: relative;
+    z-index: 1;
+    color: white;
+}
+.content-bookmark > div h1{
+    font-size: 60px;
+}
+.content-bookmark > div h3{
+    font-weight: normal;
+    font-size: 35px;
+    padding-top: 20px;
+}
+.content-bookmark > div{
+    padding-top: 180px;
+}
+.content-bookmark a{
+    text-decoration: none;
+    color:white;
+    transition: 0.3s;
+}
+.content-bookmark a:hover{
+    color:#7dc642;
 }
 
 .content-bookmark h1 {
     font-size: 65px;
-    color: #621616;
+    color: white;
     margin: 0;
 }
 
