@@ -204,19 +204,11 @@ document.addEventListener("DOMContentLoaded", () => {
     gsap.registerPlugin(ScrollTrigger);
     console.log("ScrollTrigger và GSAP đã được khởi tạo");
    
-    gsap.from(".box-service", {
-      scrollTrigger: {
-        trigger: ".box-service",
-        start: "top 60%",
-        end: "bottom 60%",
-        toggleActions: "play none none reverse",
-        markers: false,
-      },
-      opacity: 0,
-      y: 50,
-      duration: 1,
-      ease: "power1.inOut",
-    });
+  gsap.from(".box-service", {
+   opacity: 1,
+   y: 0,
+   duration: 0,
+});
     
    });
   

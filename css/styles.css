@@ -3,11 +3,19 @@ body{
 }
 /* slider */
 .slider {
-    max-width: 100vw;
-    height: 670px;
-    margin: auto;
     position: relative;
+    width: 100%;
+    height: 70vh; /* Tăng chiều cao để đủ không gian */
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Đảm bảo ảnh nền không bị biến dạng */
 }
 .sliderImg {
     position: absolute;
@@ -19,16 +27,13 @@ body{
     overflow: hidden;
     transition: transform 0.5s ease-in-out;
 }
+
 .banner {
     min-width: 100vw;
     height: 100%;
     position: relative;
 }
-.banner img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+
 .overlay {
     position: absolute;
     top: 0;
@@ -104,6 +109,35 @@ body{
     font-size: 28px;
 }
 
+.content .btnslider {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 0.8rem;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Khoảng cách giữa các nút */
+    margin-top: 20px; /* Tăng khoảng cách giữa chữ và nút bấm */
+}
+
+.btn-container a {
+    padding: 10px 20px;
+    font-size: calc(0.8rem + 0.3vw);
+    background-color: #7dc642;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-container a:hover {
+    background-color: #65a939;
+}
+
+
+
 /* hiệu ứng chữ mỗi khi chuyển slide */
 @keyframes slideDown {
     from {
@@ -178,6 +212,76 @@ body{
         display: none;
     }
 }
+@media (max-width: 480px) {
+    .slider {
+        height: 50vh; /* Chiều cao nhỏ hơn cho điện thoại */
+    }
+
+    .banner img {
+        object-fit: cover;
+    }
+
+    .content {
+        width: 90%; /* Thu nhỏ khối nội dung để phù hợp với màn hình */
+    }
+
+    .content h1 {
+        font-size: 1.5rem; /* Giảm kích thước chữ tiêu đề */
+        line-height: 1.2;
+        margin-bottom: 10px;
+    }
+
+    .content h4 {
+        font-size: 1rem; /* Giảm kích thước chữ phụ */
+        margin-bottom: 15px;
+    }
+
+    .btn-container {
+        flex-direction: column; /* Xếp chồng các nút trên màn hình nhỏ */
+        gap: 10px; /* Giãn cách giữa các nút */
+    }
+
+    .btn-container a {
+        padding: 8px 12px;
+        font-size: 0.9rem; /* Điều chỉnh kích thước nút bấm */
+    }
+
+    .dots {
+        bottom: 15px; /* Dịch vị trí dấu chấm phía dưới */
+    }
+
+    .dots li {
+        width: 8px;
+        height: 8px;
+        margin: 10px;
+    }
+}
+
+@media (max-width: 320px) {
+    .slider {
+        height: 45vh; /* Giảm thêm chiều cao cho điện thoại nhỏ */
+    }
+
+    .content h1 {
+        font-size: 1.2rem; /* Chữ nhỏ hơn trên màn hình rất nhỏ */
+    }
+
+    .content h4 {
+        font-size: 0.9rem;
+    }
+
+    .btn-container a {
+        padding: 6px 10px; /* Nút bấm nhỏ hơn */
+        font-size: 0.8rem;
+    }
+
+    .dots li {
+        width: 6px;
+        height: 6px;
+        margin: 8px;
+    }
+}
+
 
 /* Introduce */
 .introduce {
@@ -981,56 +1085,6 @@ body{
 }
 #myBtn:hover {
   background-color: #196d0e;
-}
-
-/*responsive*/
-@media (max-width: 480px) {
-    body {
-        font-size: 14px;
-        line-height: 1.5;
-    }
-
-    .slider {
-        height: 400px;
-    }
-
-    .banner img {
-        height: auto;
-    }
-
-    .content h1 {
-        font-size: 28px;
-    }
-
-    .btn {
-        padding: 10px 20px;
-        font-size: 14px;
-    }
-
-    .dots li {
-        width: 15px;
-        height: 15px;
-    }
-}
-@media (max-width: 480px) {
-    .introduce-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .intro-container {
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
-}
-@media (max-width: 480px) {
-    .nutbam {
-        display: none;
-    }
-
-    #quaman, #ccvietgap {
-        display: none;
-    }
 }
 
 
