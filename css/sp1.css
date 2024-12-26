@@ -1,73 +1,75 @@
-
+/*PHẦN ĐƯỜNG DÂN GIỮA 3 TRANG*/
 .bread-crumbs a{
     text-decoration: none; 
 }
 .bread-crumbs, .bread-crumbs a{
-    color:rgb(101, 100, 100);
+    color:rgb(101, 100, 100); 
     font-family: "Roboto",sans-serif;
     font-weight: 400;
     font-size: 15.6px;
 }
 .bread-crumbs p{
-   padding-top: 20px;
+   padding-top: 20px; 
    padding-left: 59px;
 }
+
+/* SLIDE DETOX 3 NGÀY*/
+    /*ảnh sản phẩm */
 .carousel-inner {   
-    border: 1px solid rgb(214, 213, 213);
+    border: 1px solid rgb(214, 213, 213); 
 }
 .carousel-inner img {
-    height: 400px;
-    object-fit: cover;
+    height: 400px; /
+    object-fit: cover; /*hình ảnh tự động cắt xén sao cho vừa khung*/
 }
-
-.carousel-thumbnails {
-    display: flex;
+    /*kiểu dáng cho các hinh thu nhỏ*/
+.carousel-thumbnails { 
+    display: flex; 
     justify-content: center;
-    gap: 10px;
+    gap: 10px; 
 }
-
 .carousel-thumbnails img {
-    cursor: pointer;
+    cursor: pointer; /*khi trỏ chuột vào ảnh sẽ hiển thị ảnh được kích*/
     height: 100px;
     width: 100px;
-    object-fit: cover;
+    object-fit: cover; /*hình ảnh tự động cắt xén sao cho vừa khung*/
 }
-
+    /*mô tả sản phẩm*/
 .product-title h2 {
     color: #1F6D39;
-    font-weight: bold;
+    font-weight: bold; /*chữ in đậm*/
     font-family: "Roboto",sans-serif;
     font-size: 28px;
-    margin: 0;
+    margin: 0; 
 }
 .product-title{
-    border-bottom: 1px solid #388e3c;
+    border-bottom: 1px solid #388e3c; 
     padding-bottom: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 20px; 
     
 }
-
 .product-description {
-    margin-bottom: 30px !important;
+    margin-bottom: 30px !important; 
     line-height: 1.6;
 }
+
 .col-md-8{
-    padding-left:40px;
+    padding-left:40px; 
 }
 
 .col-md-8 ul{
     padding-left: 60px;
     margin-top: 20px;
 }
-
-#add-to-cart-btn {
-    background: radial-gradient(circle, #126216, #319f36,#8fd124);
-    animation: gradientAnimation 7s ease infinite;
-    background-size: 500% ;
-    color: white;
+    /*hiệu ứng nút mua*/
+#add-to-cart-btn { 
+    background: radial-gradient(circle, #126216, #319f36,#8fd124); /*hiệu ứng với 1 dải màu*/
+    animation: gradientAnimation 7s ease infinite; /*tạo hiệu ứng cho nút*/
+    background-size: 500% ; /*kích thước nèn lớn hơn 5 lần kích thước thực tế của nút*/
+    color: rgb(242, 236, 236); 
     padding:5px 70px;
-    font-weight: 700;
-    width: 250px;
+    font-weight: 700; 
+    width: 250px; /*độ rộng của nút, đảm bảo kích thước nút đồng đều, bất kể nội dung bên trong dài hay ngắn.*/
 }
 @keyframes gradientAnimation {
     0% {
@@ -82,40 +84,45 @@
 }
 #add-to-cart-btn:hover {
     background-color: #479f00;
-    color: white;
+    color: white; /*màu chữ vẫn là màu trắng*/
     
 }
+    /*ô ưu đãi*/
 .special-offer h4{
-    font-size: 15px;
+    font-size: 15px; /*kích thước mục ưu đãi*/
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 700;
-    border-bottom: 1px rgb(206, 204, 204) dashed;
-    padding-bottom: 5px;
+    border-bottom: 1px rgb(206, 204, 204) dashed; /* thêm dòng kẻ nét đứt xuống phía dưới*/
+    padding-bottom: 5px; /*tạo kc với đưởng kẻ nét đứt phía dưới*/
 }
-.special-offer p{
+.special-offer p{ /*mua 2 giảm*/
     font-size: 13px;
     font-family: Arial, Helvetica, sans-serif;
 }
-.special-offer{
-    padding:5px 10px;
+.special-offer{ /*cả 1 ô khuyến mãi*/
+    padding:5px 10px; /* khoảng cách giữa nội dung và đường viền của khối*/
     border:rgb(254, 223, 67) 1px solid;
-    width: 250px;
-    text-align: center;
+    width: 250px; /*cố định chiều rộng của khối*/
+    text-align: center; /*Căn giữa nội dung văn bản trong khối.*/
     margin-top:10px;
 }
-
+    /*nút share*/
 .share{
     font-size: 13px;
     font-weight: normal;
     color:rgb(34, 135, 249);
     margin-top: 10px !important;
 }
+
+/*quy trình*/
+   /*ô quy trình*/
 .section-tabs {
-    justify-content: center;
+    justify-content: center; 
     display: flex;
     font-size: 20px;
     font-weight: 500;
 }
+   /*hiệu ứng kích và0*/
 .section-tabs .nav-link.active {
     background-color: #f28123;
     color: white;
@@ -124,13 +131,14 @@
 .section-tabs .nav-link {
     color: #f28123;
 }
+   /*màu nền tab*/
 .section-content {
     background-color: #fff4e6;
     padding: 15px;
 }
 
 .nav-link {
-    position: relative;
+    position: relative; 
     padding-right: 70px;
     
 }
@@ -153,6 +161,7 @@
 ul{
     list-style: none;
 }
+  /*mỗi tab nhỏ*/
 .tab-pane >p{
     margin-top: 5px !important;
     margin-bottom: 10px !important;
@@ -162,7 +171,7 @@ ul{
 .tab-pane ul li{
     position: relative;
     padding-left: 25px; 
-    margin-bottom: 10px; 
+    margin-bottom: 10px;
 }
 .tab-pane ul li::before{
     content: '';
@@ -176,6 +185,8 @@ ul{
     background-size: contain;
     background-repeat: no-repeat;
 }
+
+
 .food-container {
     position: relative;
     width: 100%;
@@ -229,32 +240,36 @@ ul{
     width: 100%; 
     padding: 10px 0; 
   }
+
+/*SẢN PHẨM TƯƠNG TỰ*/
 .similar-products{
-    margin-top: 60px;
+    margin-top: 60px; /*tạo khảng cách với phần tử phía tren*/
 }
-.similar-products .row{
-    margin:40px 0;
+.similar-products .row{ /*danh sách cách sản phẩm*/
+    margin:40px 0; 
 }
 .similar-products img{
     width: 350px;
 }
-.similar-products h2{
+.similar-products h2{ /*tiêu đề*/
     font-family: "Roboto",sans-serif;
-    font-size: 30px;
-    font-weight: 600;
-    text-transform: uppercase;
-    position: relative;
-    padding-bottom: 15px;
+    font-size: 30px; /*Thiết lập kích thước chữ*/
+    font-weight: 600; /*Đặt độ đậm của chữ*/
+    text-transform: uppercase; /*biến các chứ trong tiêu đề thành in hoa*/
+    position: relative; /* vị trí của nó được đặt dựa trên vị trí mặc định*/
+    padding-bottom: 15px; 
 }
-.similar-products h2::after{
-    content: ""; 
-    position: absolute; 
-    left:45%;
-    bottom: 0; 
-    width: 10%; 
-    height: 1px; 
-    background-color: black; 
+.similar-products h2::after{ /*phần tử giả đường kẻ ngang mỏng dưới phần tiêu đề*/
+    content: ""; /*Tạo nội dung rỗng */
+    position: absolute; /*vị trí của nó sẽ được xác định dựa trên phần tử gốc  */
+    left:45%; /*Dịch chuyển phần tử giả sang bên trái 45% tính từ cạnh trái của phần tử gốc*/
+    bottom: 0; /*Đặt phần tử giả chạm vào cạnh dưới của phần tử gốc*/
+    width: 10%; /*Thiết lập chiều rộng của phần tử giả là 10% chiều rộng của phần tử gốc*/
+    height: 1px; /* chiều cao của phần tử giả là 1 pixel, tạo thành một đường kẻ mỏng.*/
+    background-color: rgb(15, 15, 14); 
 }
+
+
 .product-image img {
     width: 100px; 
     height: auto;

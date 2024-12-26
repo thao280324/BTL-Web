@@ -1,13 +1,13 @@
+/*ĐÁNH GIÁ SẢN PHẨM*/
 .product-reviews {
     border-top: 1px solid #ddd;
     padding-top: 20px;
 }
 .product-reviews h3 {
-    color: #28a745; /* Màu xanh lá cây */
-    font-weight: bold; /* Tùy chọn: Làm chữ đậm hơn */
-    text-align: left; /* Tùy chọn: Canh giữa tiêu đề */
+    color: #28a745; 
+    font-weight: bold; 
+    text-align: left; /*căn giữa tiêu đề*/
 }
-
 
 .review-list {
     margin-bottom: 20px;
@@ -19,7 +19,7 @@
 }
 
 .review-rating {
-    color: #FFD700; /* Màu vàng cho sao */
+    color: #FFD700; 
     font-size: 14px;
     margin-left: 10px;
 }
@@ -33,20 +33,21 @@
     margin-bottom: 15px;
 }
 .btn.btn-primary {
-    background-color: #28a745; /* Màu xanh lá cây */
+    background-color: #28a745; 
 }
 
 .btn.btn-primary:hover {
-    background-color: #218838; /* Màu xanh lá đậm hơn khi hover */
+    background-color: #218838; 
 
 }
 
+
 /*chat box*/
 .chatbox-container {
-    position: fixed;
-    bottom: 20px; /* Đặt cách mép dưới của trình duyệt */
-    right: 20px; /* Đặt cách mép phải của trình duyệt */
-    width: 400px; /* Chiều rộng của chat box */
+    position: fixed; /*vị trí cố định không bị cuộn khi người dùng cuộn trang*/
+    bottom: 20px; 
+    right: 20px; 
+    width: 400px; 
     height: 500px;
     background-color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -61,8 +62,8 @@
     color: white;
     padding: 10px;
     font-size: 16px;
-    display: flex;
-    justify-content: space-between;
+    display: flex;   /* Căn các phần tử trong header ra hai bên, cách đều nhau */
+    justify-content: space-between;   /* Căn các phần tử trong header theo chiều dọc ở giữa */
     align-items: center;
 }
 
@@ -71,21 +72,22 @@
 }
 
 .chatbox-close {
-    background: none;
+    background: none; /*loại bỏ màu nền mặc định của nút*/
     border: none;
     color: white;
     font-size: 18px;
-    cursor: pointer;
+    cursor: pointer; /*chuyển thành biểu tượng con trỏ tay*/
 }
 
 .chatbox-body {
     padding: 10px;
     font-size: 14px;
 }
+   /*NÚT TƯ VẤN */
 
 #chatboxToggle {
     position: fixed;
-    bottom: 20px; /* Nằm cùng vị trí với chatbox */
+    bottom: 20px; 
     right: 20px;
     background-color: #28a745;
     color: white;
@@ -97,28 +99,30 @@
     z-index: 10000; /* Luôn nổi trên các phần tử khác */
 }
 #chatInput {
-    flex: 1; /* Để input chiếm toàn bộ không gian còn lại */
-    border: 1px solid #ddd; /* Đường viền cho input */
-    border-radius: 5px; /* Góc bo tròn */
-    padding: 8px; /* Khoảng cách bên trong input */
+    flex: 1; /
+    border: 1px solid #ddd; 
+    border-radius: 5px; 
+    padding: 8px;
     font-size: 14px; /* Cỡ chữ */
     outline: none; /* Loại bỏ viền mặc định khi nhấn vào */
     width: 300px;
 }
 
 #sendButton {
-    background-color: #28a745; /* Màu nền xanh lá cho nút gửi */
-    color: white; /* Màu chữ trắng */
-    border: none; /* Loại bỏ viền nút */
-    border-radius: 5px; /* Góc bo tròn */
-    padding: 8px 15px; /* Khoảng cách trong nút */
-    margin-left: 10px; /* Khoảng cách giữa nút gửi và input */
+    background-color: #28a745; 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    padding: 8px 15px; 
+    margin-left: 10px; 
     cursor: pointer; /* Thay đổi con trỏ khi hover */
 }
 
 #sendButton:hover {
     background-color: #218838; /* Màu xanh lá đậm hơn khi hover */
 }
+
+
 /*tin tức nổi bật*/
 .featured-news {
     background-color: #f9f9f9; /*màu nền*/
